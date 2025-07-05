@@ -1,0 +1,31 @@
+EnergyRenewable/
+├── assets/
+│   ├── fonts/
+│   └── lib/
+│       ├── bootstrap.min.css
+│       ├── bootstrap.min.js
+│       └── popper.min.js
+├── CSS/
+│   ├── animations.css
+│   ├── fonts.css
+│   └── style.css
+├── JS/
+│   └── script.js
+├── SubPages/
+│   ├── Suport/
+│   │   ├── about.html
+│   │   ├── help-centre.html
+│   │   ├── privacy.html
+│   │   └── terms.html
+│   └── TiposDeEnergias/
+│   |   ├── biogas.html
+│   |   ├── biomasa.html
+│   |   ├── eolica.html
+│   |   ├── geotermica.html
+│   |   ├── hidroelectrica.html
+│   |   ├── solar.html
+│   ├── calculadora.html
+│   └── vidaevo.html
+├── estructura.txt
+├── index.html
+└── README.md

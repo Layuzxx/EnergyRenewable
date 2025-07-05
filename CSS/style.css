@@ -1,0 +1,118 @@
+/* Estilos Generales */
+:root {
+    --primary-color: #2E8B57; /* Verde mar */
+    --secondary-color: #F4A460; /* Arena */
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 70px; /* Ajuste para el navbar fijo */
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+/* Estilos del Header */
+.navbar {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--dark-gray) !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Estilos del Main Content */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #256d49;
+    border-color: #256d49;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.progress-bar-custom {
+    height: 25px;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    background-color: var(--secondary-color);
+    border-radius: .25rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    font-weight: bold;
+}
+
+.progress-bar-custom::after {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    color: white;
+}
+
+/* Estilos del Footer */
+footer {
+    background-color: var(--dark-gray) !important;
+}
+
+footer h5 {
+    color: var(--primary-color);
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Estilos de la línea de tiempo */
+.timeline::after {
+    background-color: var(--primary-color) !important;
+}
+
+.timeline-container::after {
+    border-color: var(--primary-color) !important;
+}
+
+/* Estilos de la calculadora */
+#calculator .card {
+    background-color: #ffffff;
+}
