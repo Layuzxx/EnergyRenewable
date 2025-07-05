@@ -1,0 +1,15 @@
+.navbar.navbar-expand-lg.bg-body-tertiary{
+    padding: 8px 50px 8px 50px;
+}
+
+.navbar-brand {
+    color: blue;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.nav-link {
+    color: black;
+    font-weight: 500;
+}
+
