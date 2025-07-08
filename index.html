@@ -20,36 +20,21 @@
 </head>
 <body>
     <!-- ===== Header ===== -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Energy Renewable</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/EnergyRenewable/SubPages/vidaevo.html">VidaEvo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/EnergyRenewable/SubPages/calculadora.html">Calculadora</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tipos De Energias</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Energia Biogas</a></li>
-                                <li><a class="dropdown-item" href="#">Energia Biomasa</a></li>
-                                <li><a class="dropdown-item" href="#">Energia Eolica</a></li>
-                                <li><a class="dropdown-item" href="#">Energia Geotermica</a></li>
-                                <li><a class="dropdown-item" href="#">Energia Hidroelectrica</a></li>
-                                <li><a class="dropdown-item" href="#">Energia Solar</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    </form>
-                </div>
-            </div>
+    <!-- ===== Banner ===== -->
+    <header id="header">
+        <nav id="nav-one">
+          <a href="/EnergyRenewable/SubPages/Suport/about.html" class="nav-one-item">About</a>
+          <a href="/EnergyRenewable/SubPages/Suport/help-centre.html" class="nav-one-item">Help Center</a>
+        </nav>
+        <nav id="nav-two">
+          <a href="/EnergyRenewable/index.html" class="nav-title">Energy Renewable</a>
+          <form id="nav-buscar">
+            <label for="buscar"></label>
+            <input type="search" name="buscar" id="buscar">
+          </form>
+          <!-- ===== Menu Despegable ===== -->
+          <a href="/EnergyRenewable/SubPages/vidaevo.html" class="nav-two-item">VidaEvo</a>
+          <a href="/EnergyRenewable/SubPages/calculadora.html" class="nav-two-item">Calculadora</a>
         </nav>
     </header>
 </body>

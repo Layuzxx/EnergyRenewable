@@ -1,15 +1,35 @@
-.navbar.navbar-expand-lg.bg-body-tertiary{
-    padding: 8px 50px 8px 50px;
+#nav-one {
+    background-color: #f3f3f3;
+    padding: 5px 50px 5px 50px;
+    text-align: end;
 }
 
-.navbar-brand {
-    color: blue;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.nav-link {
+.nav-one-item {
+    text-decoration: none;
     color: black;
+    padding-left: 25px;
     font-weight: 500;
 }
 
+#nav-two {
+    display: flex;
+    background-color: blue;
+    padding: 15px 50px 15px 50px;
+}
+
+.nav-title {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 50px;
+}
+
+.nav-two-item {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0px 25px 0px 25px;
+    justify-content: flex-end;
+}
