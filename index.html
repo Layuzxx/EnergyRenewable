@@ -4,38 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Renewable</title>
-    <!-- ===== BootStrap CSS ===== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <!-- ===== CSSs ===== -->
-    <link rel="stylesheet" href="/EnergyRenewable/CSS/style.css">
-    <link rel="stylesheet" href="/EnergyRenewable/CSS/animations.css">
-    <link rel="stylesheet" href="/EnergyRenewable/CSS/fonts.css">
-    <!-- ===== Icons ===== -->
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/animations.css">
+    <link rel="stylesheet" href="/CSS/fonts.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- ===== JS ===== -->
-    <script src="/EnergyRenewable/JS/script.js" defer></script>
-    <!-- ===== BootStrap JS ===== -->
+    <script src="/JS/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- ===== Header ===== -->
-    <!-- ===== Banner ===== -->
-    <header id="header">
-        <nav id="nav-one">
-          <a href="/EnergyRenewable/SubPages/Suport/about.html" class="nav-one-item">About</a>
-          <a href="/EnergyRenewable/SubPages/Suport/help-centre.html" class="nav-one-item">Help Center</a>
-        </nav>
-        <nav id="nav-two">
-          <a href="/EnergyRenewable/index.html" class="nav-title">Energy Renewable</a>
-          <form id="nav-buscar">
-            <label for="buscar"></label>
-            <input type="search" name="buscar" id="buscar">
-          </form>
-          <!-- ===== Menu Despegable ===== -->
-          <a href="/EnergyRenewable/SubPages/vidaevo.html" class="nav-two-item">VidaEvo</a>
-          <a href="/EnergyRenewable/SubPages/calculadora.html" class="nav-two-item">Calculadora</a>
-        </nav>
-    </header>
+  <header id="header">
+    <nav id="nav-one">
+      <a href="/SubPages/Suport/about.html" class="nav-one-item">About</a>
+      <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Help Center</a>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
+      <div class="container-fluid">
+        <a class="navbar-brand nav-title" href="/index.html">Energy Renewable</a>
+        <form class="d-flex position-relative me-auto search-form-order">
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
+            <span class="input-group-text"><i class="ri-search-line"></i></span>
+          </div>
+            <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;">
+              <li><a class="dropdown-item" href="#">Sugerencia 1: Energía Solar</a></li>
+              <li><a class="dropdown-item" href="#">Sugerencia 2: Energía Eólica</a></li>
+              <li><a class="dropdown-item" href="#">Sugerencia 3: Biomasa</a></li>
+            </ul>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-two-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tipos de Energía</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biogas.html">Energía Biogas</a></li>
+                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Energía Biomasa</a></li>
+                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Energía Eólica</a></li>
+                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Energía Geotérmica</a></li>
+                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Energía Hidroeléctrica</a></li>
+                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Energía Solar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="contenido">
+    
+  </div>
+
+  <footer class="custom-footer-bg text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+      <div class="row text-center text-md-start">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Energías</h5>
+          <p><a href="/SubPages/TiposDeEnergias/biogas.html" class="text-white footer-link" style="text-decoration: none;">Energía Biogás</a></p>
+          <p><a href="/SubPages/TiposDeEnergias/biomasa.html" class="text-white footer-link" style="text-decoration: none;">Energía Biomasa</a></p>
+          <p><a href="/SubPages/TiposDeEnergias/eolica.html" class="text-white footer-link" style="text-decoration: none;">Energía Eólica</a></p>
+          <p><a href="/SubPages/TiposDeEnergias/geotermica.html" class="text-white footer-link" style="text-decoration: none;">Energía Geotérmica</a></p>
+          <p><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="text-white footer-link" style="text-decoration: none;">Energía Hidroeléctrica</a></p>
+          <p><a href="/SubPages/TiposDeEnergias/solar.html" class="text-white footer-link" style="text-decoration: none;">Energía Solar</a></p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Soporte</h5>
+          <p><a href="/SubPages/Suport/about.html" class="text-white footer-link" style="text-decoration: none;">About</a></p>
+          <p><a href="/SubPages/Suport/help-center.html" class="text-white footer-link" style="text-decoration: none;">Help Center</a></p>
+        </div>
+      </div>
+      <hr class="mb-4">
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="text-white text-center text-md-start">© 2025 Todos los derechos reservados por:
+            <a href="#" style="text-decoration: none;">
+              <strong class="text-warning">Energy Renewable</strong>
+            </a>
+          </p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-end footer-links-bottom">
+            <a href="/SubPages/Suport/terms.html" class="text-white footer-link me-3" style="text-decoration: none;">Terms</a>
+            <a href="/SubPages/Suport/privacy.html" class="text-white footer-link" style="text-decoration: none;">Privacy</a>
+            <a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="text-white ms-3">
+              <i class="bi bi-github footer-github-icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,6 +1,11 @@
+.contenido {
+    background-color: antiquewhite;
+    height: 500px;
+}
+
 #nav-one {
     background-color: #f3f3f3;
-    padding: 5px 50px 5px 50px;
+    padding: 5px 50px;
     text-align: end;
 }
 
@@ -11,10 +16,9 @@
     font-weight: 500;
 }
 
-#nav-two {
-    display: flex;
-    background-color: blue;
-    padding: 15px 50px 15px 50px;
+.custom-navbar-bg {
+    background-color: blue !important;
+    padding: 15px 50px;
 }
 
 .nav-title {
@@ -22,14 +26,89 @@
     font-size: 35px;
     font-weight: bold;
     text-decoration: none;
-    padding-right: 50px;
+    margin-right: 50px;
 }
 
 .nav-two-item {
-    color: white;
+    color: white !important;
     font-size: 25px;
     font-weight: 600;
     text-decoration: none;
-    padding: 0px 25px 0px 25px;
-    justify-content: flex-end;
+    padding: 0px 15px;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+.dropdown-item {
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+.input-group-text {
+    background-color: white;
+    border-left: 0;
+    padding: .375rem .75rem;
+}
+
+.input-group .form-control {
+    border-right: 0;
+}
+
+#search-suggestions {
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+@media (min-width: 992px) {
+    .search-form-order {
+        order: 0;
+        flex-grow: 0.5;
+        max-width: 300px;
+    }
+    #navbarNav {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+    .navbar-nav {
+        margin-left: auto !important;
+    }
+}
+
+.custom-footer-bg {
+    background-color: blue !important;
+}
+
+.footer-link {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.text-warning {
+    color: #f3f3f3 !important;
+    font-weight: bold;
+}
+
+.footer-github-icon {
+    font-size: 35px;
+    color: white;
+}
+
+@media (max-width: 767.98px) {
+    .footer-links-bottom {
+        text-align: center !important;
+        margin-top: 15px;
+    }
 }
