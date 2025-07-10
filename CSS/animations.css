@@ -1,12 +1,48 @@
-.nav-one-item:hover,
-.nav-two-item:hover {
-    color: #dddddd;
-    transition: color 0.3s ease-in-out;
+/* ============== ANIMACIONES Y PSEUDOCLASES ============== */
+
+/* Transiciones suaves */
+.nav-one-item, .nav-two-item, .dropdown-item, .footer-link, .social-icon, .navbar-toggler {
+    transition: all 0.3s ease-in-out;
 }
 
+/* Efectos Hover */
+.nav-one-item:hover {
+    color: var(--primary-color);
+}
+
+.nav-two-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color) !important;
+    transform: translateY(-2px);
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.footer-link:hover {
+    color: var(--text-color) !important;
+    transform: translateX(5px);
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2) rotate(5deg);
+}
+
+.footer-brand-link:hover {
+    text-decoration: underline !important;
+}
+
+.navbar-toggler:hover {
+    opacity: 0.8;
+}
+
+/* Keyframes */
 @keyframes slideInFromLeft {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-50px);
         opacity: 0;
     }
     100% {
@@ -19,27 +55,14 @@
     animation: slideInFromLeft 0.8s ease-out forwards;
 }
 
-.navbar-toggler:hover {
-    opacity: 0.8;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.footer-link:hover {
-    color: #bbbbbb !important;
-    transition: color 0.2s ease-in-out;
-}
-
-.footer-github-icon:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 

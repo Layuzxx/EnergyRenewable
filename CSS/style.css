@@ -1,75 +1,98 @@
-.contenido {
-    background-color: antiquewhite;
-    height: 500px;
+/* ============== VARIABLES DE COLOR ============== */
+:root {
+    --primary-color: #2C5F2D; /* Verde oscuro principal */
+    --secondary-color: #97BC62FF; /* Verde claro acento */
+    --dark-bg-color: #222831; /* Fondo oscuro para header/footer */
+    --text-color: #FFFFFF; /* Color de texto principal en fondos oscuros */
+    --text-color-light: #DDDDDD; /* Texto más suave */
+    --light-bg-color: #f8f9fa; /* Fondo claro para menús */
+    --dark-text-color: #333333; /* Texto para fondos claros */
 }
 
+/* ============== ESTILOS GENERALES ============== */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenido {
+    background-color: #fdfaf4;
+    min-height: 70vh;
+    padding: 2rem 0;
+}
+
+/* ============== HEADER / NAVEGACIÓN ============== */
 #nav-one {
     background-color: #f3f3f3;
     padding: 5px 50px;
     text-align: end;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .nav-one-item {
     text-decoration: none;
-    color: black;
+    color: var(--dark-text-color);
     padding-left: 25px;
     font-weight: 500;
+    font-size: 0.9rem;
 }
 
 .custom-navbar-bg {
-    background-color: blue !important;
-    padding: 15px 50px;
+    background-color: var(--dark-bg-color) !important;
+    padding: 10px 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .nav-title {
-    color: white;
-    font-size: 35px;
+    color: var(--text-color);
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
     margin-right: 50px;
 }
+.nav-title i {
+    color: var(--secondary-color);
+    margin-right: 8px;
+    vertical-align: -2px;
+}
 
 .nav-two-item {
-    color: white !important;
-    font-size: 25px;
-    font-weight: 600;
+    color: var(--text-color) !important;
+    font-size: 1.1rem;
+    font-weight: 500;
     text-decoration: none;
-    padding: 0px 15px;
+    padding: 8px 15px !important;
+    border-radius: 5px;
 }
 
 .dropdown-menu {
-    background-color: #f8f9fa;
+    background-color: var(--light-bg-color);
     border-radius: 0.25rem;
+    border: none;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
 }
 
 .dropdown-item {
-    color: black;
-    font-size: 18px;
+    color: var(--dark-text-color);
+    font-size: 1rem;
     padding: 10px 20px;
 }
 
-.dropdown-item:hover {
-    background-color: #e9ecef;
-    color: #0056b3;
-}
-
-.input-group-text {
-    background-color: white;
-    border-left: 0;
-    padding: .375rem .75rem;
-}
-
+/* Estilos del buscador */
 .input-group .form-control {
     border-right: 0;
 }
-
+.input-group .form-control:focus {
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+.input-group-text {
+    background-color: white;
+    border-left: 0;
+}
 #search-suggestions {
     top: 100%;
     left: 0;
     z-index: 1000;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
 
 @media (min-width: 992px) {
@@ -78,37 +101,57 @@
         flex-grow: 0.5;
         max-width: 300px;
     }
-    #navbarNav {
-        flex-grow: 1;
-        justify-content: flex-end;
-    }
-    .navbar-nav {
-        margin-left: auto !important;
-    }
 }
 
+/* ============== FOOTER ============== */
 .custom-footer-bg {
-    background-color: blue !important;
+    background-color: var(--dark-bg-color) !important;
+}
+
+.footer-heading {
+    color: var(--secondary-color) !important;
+    font-weight: 700 !important;
+}
+.footer-heading i {
+    margin-right: 8px;
 }
 
 .footer-link {
-    font-size: 18px;
-    font-weight: 500;
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-block;
+    padding-bottom: 2px;
 }
 
-.text-warning {
-    color: #f3f3f3 !important;
-    font-weight: bold;
+.custom-footer-bg hr {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    height: 1px;
 }
 
-.footer-github-icon {
-    font-size: 35px;
-    color: white;
+.footer-brand-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.social-icon {
+    color: var(--text-color-light);
+    font-size: 1.8rem;
 }
 
 @media (max-width: 767.98px) {
-    .footer-links-bottom {
+    .social-icons {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .text-md-start {
         text-align: center !important;
-        margin-top: 15px;
     }
 }
