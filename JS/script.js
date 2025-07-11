@@ -36,3 +36,71 @@ document.addEventListener('DOMContentLoaded', () => {
     //        prevenir el envío del formulario. Aquí se podría añadir lógica
     //        para seleccionar una sugerencia o redirigir.
 });
+
+// ========== BOTÓN FLOTANTE IR ARRIBA ==========
+window.addEventListener('scroll', () => {
+  const btnIrArriba = document.getElementById('btn-ir-arriba');
+  if (!btnIrArriba) return;
+  if (window.scrollY > 300) {
+    btnIrArriba.style.display = 'flex';
+  } else {
+    btnIrArriba.style.display = 'none';
+  }
+});
+if (document.getElementById('btn-ir-arriba')) {
+  document.getElementById('btn-ir-arriba').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ========== ANIMACIÓN SCROLL REVEAL BÁSICA ==========
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.animate__animated');
+  const windowHeight = window.innerHeight;
+  reveals.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 60) {
+      el.classList.add('animate__fadeInUp');
+    }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('DOMContentLoaded', revealOnScroll);
+
+// ========== MEJORA DE BARRA DE BÚSQUEDA ==========
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('buscar-input');
+  const suggestions = document.getElementById('search-suggestions');
+  if (!input || !suggestions) return;
+  const sugerencias = [
+    'Energía Solar', 'Energía Eólica', 'Biomasa', 'Biogás', 'Geotérmica', 'Hidroeléctrica', 'Calculadora', 'VidaEvo', 'Sobre Nosotros'
+  ];
+  input.addEventListener('input', function() {
+    const value = this.value.toLowerCase();
+    suggestions.innerHTML = '';
+    if (value.length === 0) {
+      suggestions.style.display = 'none';
+      return;
+    }
+    const filtradas = sugerencias.filter(s => s.toLowerCase().includes(value));
+    if (filtradas.length === 0) {
+      suggestions.style.display = 'none';
+      return;
+    }
+    filtradas.forEach(s => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.className = 'dropdown-item';
+      a.href = '#';
+      a.textContent = s;
+      li.appendChild(a);
+      suggestions.appendChild(li);
+    });
+    suggestions.style.display = 'block';
+  });
+  document.addEventListener('click', function(e) {
+    if (!input.contains(e.target) && !suggestions.contains(e.target)) {
+      suggestions.style.display = 'none';
+    }
+  });
+});

@@ -74,7 +74,126 @@
     </header>
 
     <main class="contenido">
-    
+      <section class="container py-5 animate__animated">
+        <h2 class="fw-bold mb-5 text-center"><i class="ri-timeline-view text-success"></i> Línea de Tiempo: Evolución de las Energías Renovables (1965-2025)</h2>
+        <div class="timeline-container position-relative">
+          <div class="timeline">
+            <!-- 1965-1979: Primeros avances y conciencia ambiental -->
+            <div class="timeline-item left animate__animated">
+              <div class="timeline-dot bg-success"></div>
+              <div class="timeline-content shadow">
+                <h5>1965-1979 <i class="ri-seedling-line text-success"></i></h5>
+                <ul>
+                  <li>1965: Primeras investigaciones sobre energía solar y eólica a nivel experimental.</li>
+                  <li>1973: Crisis del petróleo impulsa la búsqueda de fuentes alternativas.</li>
+                  <li>1978: EE.UU. promulga la Public Utility Regulatory Policies Act (PURPA), incentivando renovables.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 1980-1989: Primeras instalaciones comerciales -->
+            <div class="timeline-item right animate__animated">
+              <div class="timeline-dot bg-info"></div>
+              <div class="timeline-content shadow">
+                <h5>1980-1989 <i class="ri-windy-line text-info"></i></h5>
+                <ul>
+                  <li>1980: Primer parque eólico comercial en California.</li>
+                  <li>1983: Desarrollo de paneles solares fotovoltaicos más eficientes.</li>
+                  <li>1987: Primeras plantas de biomasa a escala industrial.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 1990-1999: Expansión y políticas globales -->
+            <div class="timeline-item left animate__animated">
+              <div class="timeline-dot bg-warning"></div>
+              <div class="timeline-content shadow">
+                <h5>1990-1999 <i class="ri-earth-line text-warning"></i></h5>
+                <ul>
+                  <li>1992: Cumbre de la Tierra en Río, impulso global a las renovables.</li>
+                  <li>1997: Protocolo de Kioto, compromisos de reducción de emisiones.</li>
+                  <li>1999: Primeras plantas solares de gran escala en Europa.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 2000-2009: Innovación y crecimiento acelerado -->
+            <div class="timeline-item right animate__animated">
+              <div class="timeline-dot bg-primary"></div>
+              <div class="timeline-content shadow">
+                <h5>2000-2009 <i class="ri-flashlight-line text-primary"></i></h5>
+                <ul>
+                  <li>2001: Alemania lanza la Ley de Energías Renovables (EEG).</li>
+                  <li>2005: China inicia su expansión eólica y solar.</li>
+                  <li>2009: Se superan los 100 GW de capacidad renovable instalada mundialmente.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 2010-2019: Renovables como protagonistas -->
+            <div class="timeline-item left animate__animated">
+              <div class="timeline-dot bg-danger"></div>
+              <div class="timeline-content shadow">
+                <h5>2010-2019 <i class="ri-bar-chart-grouped-line text-danger"></i></h5>
+                <ul>
+                  <li>2011: Japón impulsa renovables tras el accidente de Fukushima.</li>
+                  <li>2015: Acuerdo de París, compromiso global con la descarbonización.</li>
+                  <li>2018: La energía solar se convierte en la fuente más barata en muchos países.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 2020-2025: Innovación, integración y futuro sostenible -->
+            <div class="timeline-item right animate__animated">
+              <div class="timeline-dot bg-secondary"></div>
+              <div class="timeline-content shadow">
+                <h5>2020-2025 <i class="ri-line-chart-line text-secondary"></i></h5>
+                <ul>
+                  <li>2020: Las renovables superan al carbón en generación eléctrica global.</li>
+                  <li>2022: Avances en almacenamiento y redes inteligentes.</li>
+                  <li>2025: Proyección de más del 40% de la electricidad mundial proveniente de renovables.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <span class="badge bg-success fs-6">Haz scroll para explorar la evolución de las energías renovables</span>
+        </div>
+      </section>
+      <style>
+        .timeline-container { padding: 0 0.5rem; }
+        .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 4px; background: #97BC62FF; top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+        .timeline-item { padding: 1.5rem 0; position: relative; width: 50%; }
+        .timeline-item.left { left: 0; }
+        .timeline-item.right { left: 50%; }
+        .timeline-content { background: #fff; border-radius: 1rem; padding: 1.2rem 1.5rem; position: relative; box-shadow: 0 4px 24px rgba(44,95,45,0.08); }
+        .timeline-dot { position: absolute; top: 32px; width: 22px; height: 22px; border-radius: 50%; left: 100%; margin-left: -11px; border: 3px solid #fff; z-index: 1; box-shadow: 0 0 0 4px #f3f3f3; }
+        .timeline-item.right .timeline-dot { left: -11px; }
+        .timeline-item.left .timeline-content { margin-left: 40px; }
+        .timeline-item.right .timeline-content { margin-right: 40px; }
+        @media (max-width: 767.98px) {
+          .timeline::after { left: 8px; }
+          .timeline-item { width: 100%; left: 0 !important; padding-left: 2.5rem; }
+          .timeline-item.right .timeline-dot { left: 0; }
+          .timeline-item.left .timeline-dot { left: 0; }
+          .timeline-item .timeline-content { margin: 0 0 0 40px; }
+        }
+      </style>
+      <script>
+        // Animación de aparición al hacer scroll
+        document.addEventListener('scroll', function() {
+          document.querySelectorAll('.timeline-item').forEach(function(item) {
+            var rect = item.getBoundingClientRect();
+            if(rect.top < window.innerHeight - 100) {
+              item.classList.add('animate__fadeInUp');
+            }
+          });
+        });
+        // Inicializar animación al cargar
+        document.querySelectorAll('.timeline-item').forEach(function(item) {
+          var rect = item.getBoundingClientRect();
+          if(rect.top < window.innerHeight - 100) {
+            item.classList.add('animate__fadeInUp');
+          }
+        });
+      </script>
     </main>
 
     <footer class="custom-footer-bg text-white pt-5 pb-4">

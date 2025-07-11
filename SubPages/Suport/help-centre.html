@@ -74,7 +74,84 @@
     </header>
 
     <main class="contenido">
-    
+      <section class="container py-5 animate__animated">
+        <h2 class="fw-bold mb-5 text-center"><i class="ri-question-answer-line text-success"></i> Centro de Ayuda</h2>
+        <!-- FAQ INTERACTIVO -->
+        <div class="accordion mb-5" id="faqAyuda">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqA1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA1" aria-expanded="true" aria-controls="collapseA1">
+                ¿Cómo puedo contactar al equipo de Energy Renewable?
+              </button>
+            </h2>
+            <div id="collapseA1" class="accordion-collapse collapse show" aria-labelledby="faqA1" data-bs-parent="#faqAyuda">
+              <div class="accordion-body">
+                Puedes escribirnos a <a href="mailto:info@energyrenewable.com">info@energyrenewable.com</a> o usar el formulario de contacto en la página principal.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqA2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA2" aria-expanded="false" aria-controls="collapseA2">
+                ¿Dónde puedo encontrar recursos y enlaces útiles?
+              </button>
+            </h2>
+            <div id="collapseA2" class="accordion-collapse collapse" aria-labelledby="faqA2" data-bs-parent="#faqAyuda">
+              <div class="accordion-body">
+                En la sección "Recursos y Enlaces Útiles" de la página principal encontrarás enlaces a organismos, calculadoras y documentos relevantes.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqA3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA3" aria-expanded="false" aria-controls="collapseA3">
+                ¿Cómo puedo contribuir o colaborar con el proyecto?
+              </button>
+            </h2>
+            <div id="collapseA3" class="accordion-collapse collapse" aria-labelledby="faqA3" data-bs-parent="#faqAyuda">
+              <div class="accordion-body">
+                Puedes contactarnos para proponer colaboraciones, enviar sugerencias o participar en iniciativas educativas y de divulgación.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Información de contacto rápida -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6">
+            <div class="card shadow text-center animate__animated animate__fadeInUp">
+              <div class="card-body">
+                <i class="ri-mail-send-line fs-2 text-success mb-2"></i>
+                <h5 class="fw-bold">Contacto Directo</h5>
+                <p class="mb-2">info@energyrenewable.com</p>
+                <p class="mb-0">También puedes usar el formulario de contacto en la página principal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Recursos útiles -->
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="card h-100 shadow text-center animate__animated animate__fadeInUp">
+              <div class="card-body">
+                <i class="ri-global-line fs-2 text-info mb-2"></i>
+                <h6 class="fw-bold">IRENA</h6>
+                <p class="mb-2">Agencia Internacional de Energías Renovables</p>
+                <a href="https://www.irena.org/" target="_blank" class="btn btn-outline-success btn-sm">Visitar <i class="ri-external-link-line"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow text-center animate__animated animate__fadeInUp animate__delay-1s">
+              <div class="card-body">
+                <i class="ri-government-line fs-2 text-primary mb-2"></i>
+                <h6 class="fw-bold">REN21</h6>
+                <p class="mb-2">Red global de políticas de energías renovables</p>
+                <a href="https://www.ren21.net/" target="_blank" class="btn btn-outline-success btn-sm">Visitar <i class="ri-external-link-line"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="custom-footer-bg text-white pt-5 pb-4">
