@@ -20,6 +20,10 @@ body {
     padding: 2rem 0;
 }
 
+/* ============== CONTENIDO ============== */
+
+
+
 /* ============== HEADER / NAVEGACIÓN ============== */
 #nav-one {
     background-color: #f3f3f3;
@@ -155,3 +159,4 @@ body {
         text-align: center !important;
     }
 }
+

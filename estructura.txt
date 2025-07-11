@@ -10,6 +10,7 @@ EnergyRenewable/
 │   ├── fonts.css
 │   └── style.css
 ├── JS/
+│   └── graficas.js
 │   └── script.js
 ├── SubPages/
 │   ├── Suport/
