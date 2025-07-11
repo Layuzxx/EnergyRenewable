@@ -1,4 +1,4 @@
-  const ctx = document.getElementById('grafica');
+  const ctx = document.getElementById('grafica-1');
 
   new Chart(ctx, {
     type: 'bar',
