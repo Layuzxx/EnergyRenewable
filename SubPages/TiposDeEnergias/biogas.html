@@ -21,7 +21,12 @@
     <link rel="stylesheet" href="/CSS/animations.css">
     <link rel="stylesheet" href="/CSS/fonts.css">
     <script src="/JS/script.js" defer></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ============== GRAFICAS ============== -->  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="/JS/graficas.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -151,8 +156,7 @@
           El biogás reduce la emisión de metano a la atmósfera, mejora la gestión de residuos y disminuye la dependencia de combustibles fósiles. Además, el digestato aporta nutrientes al suelo, cerrando el ciclo de la materia orgánica.
         </p>
         <div class="placeholder-grafico p-3 mt-3">
-          <strong>[ESPACIO PARA GRÁFICO: Reducción de emisiones por biogás]</strong><br>
-          <!-- Comentario: Aquí se debe insertar un gráfico de barras que represente "las toneladas de CO2 evitadas anualmente por el uso de biogás". Datos: Año, Toneladas CO2 evitadas. -->
+<canvas id="grafica"></canvas>
         </div>
       </section>
 
