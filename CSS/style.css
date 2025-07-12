@@ -1,157 +1,36 @@
 /* ============== VARIABLES DE COLOR ============== */
 :root {
-    --primary-color: #2C5F2D; /* Verde oscuro principal */
-    --secondary-color: #97BC62FF; /* Verde claro acento */
-    --dark-bg-color: #222831; /* Fondo oscuro para header/footer */
-    --text-color: #FFFFFF; /* Color de texto principal en fondos oscuros */
-    --text-color-light: #DDDDDD; /* Texto más suave */
-    --light-bg-color: #f8f9fa; /* Fondo claro para menús */
-    --dark-text-color: #333333; /* Texto para fondos claros */
+    --primary-color: #2C5F2D;      /* Verde oscuro principal para elementos clave */
+    --secondary-color: #97BC62FF;  /* Verde claro como color de acento */
+    --dark-bg-color: #222831;      /* Fondo oscuro para header y footer */
+    --text-color: #FFFFFF;         /* Texto principal sobre fondos oscuros (blanco) */
+    --text-color-light: #DDDDDD;   /* Texto más suave sobre fondos oscuros */
+    --light-bg-color: #f8f9fa;     /* Fondo claro para menús y secciones */
+    --dark-text-color: #333333;    /* Texto oscuro para usar sobre fondos claros */
+    --body-bg: #FFFFFF;            /* Fondo principal del cuerpo de la página */
 }
 
 /* ============== ESTILOS GENERALES ============== */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fuente principal importada de Google Fonts */
+    background-color: var(--body-bg);
+    color: var(--dark-text-color);
 }
 
 .contenido {
-    background-color: #f3f3f3;
-    min-height: 70vh;
+    /* Fondo ligeramente gris para el contenido principal, diferenciándolo del body */
+    background-color: #fdfdfd; 
+    min-height: 70vh; /* Asegura que el contenido ocupe un espacio mínimo */
     padding: 2rem 0;
 }
-
-/* ============== CONTENIDO ============== */
-
-/* HERO SECTION */
-.hero-section {
-  min-height: 60vh;
-  background: linear-gradient(120deg, #e0ffe6 0%, #f8f9fa 100%);
-  position: relative;
-  overflow: hidden;
-}
-.hero-section h1 {
-  color: var(--primary-color);
-  letter-spacing: 1px;
-}
-.hero-section .hero-icons i {
-  transition: transform 0.3s;
-}
-.hero-section .hero-icons i:hover {
-  transform: scale(1.2) rotate(-5deg);
-}
-.scroll-down-arrow {
-  animation-duration: 2s;
-}
-
-/* BENEFIT CARDS */
-.benefit-card {
-  border: none;
-  border-radius: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.benefit-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(44,95,45,0.12);
-}
-
-/* PLACEHOLDER GRAFICO */
-.placeholder-grafico {
-  border: 2px dashed var(--secondary-color);
-  color: var(--dark-bg-color);
-  font-size: 1.1rem;
-  background: #f8f9fa;
-}
-
-/* FAQ ACCORDION */
-.accordion-button:not(.collapsed) {
-  color: var(--primary-color);
-  background-color: #e6f4ea;
-}
-.accordion-button:focus {
-  box-shadow: 0 0 0 0.2rem var(--secondary-color);
-}
-
-/* TESTIMONIOS */
-.card blockquote {
-  font-size: 1.1rem;
-  color: var(--dark-text-color);
-}
-.card .blockquote-footer {
-  color: var(--secondary-color);
-}
-
-/* RECURSOS */
-.card .btn-outline-success {
-  border-radius: 2rem;
-  font-size: 0.95rem;
-}
-
-/* CONTACTO */
-form .form-label {
-  font-weight: 500;
-  color: var(--primary-color);
-}
-form .form-control:focus {
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 0 0.2rem #97bc6240;
-}
-
-/* BOTÓN IR ARRIBA */
-#btn-ir-arriba {
-  width: 56px;
-  height: 56px;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(44,95,45,0.15);
-  transition: background 0.2s, transform 0.2s;
-}
-#btn-ir-arriba:hover {
-  background: var(--primary-color);
-  transform: scale(1.08);
-}
-
-/* RESPONSIVIDAD EXTRA */
-@media (max-width: 991.98px) {
-  .hero-section h1 {
-    font-size: 2.2rem;
-  }
-  .hero-section .hero-icons i {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .hero-section {
-    padding: 2rem 0 4rem 0;
-  }
-  .benefit-card {
-    margin-bottom: 1.5rem;
-  }
-  .scroll-down-arrow {
-    display: none;
-  }
-}
-@media (max-width: 575.98px) {
-  .hero-section h1 {
-    font-size: 1.3rem;
-  }
-  .hero-section .hero-icons {
-    gap: 1rem;
-  }
-  .container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
 
 /* ============== HEADER / NAVEGACIÓN ============== */
 #nav-one {
     background-color: #f3f3f3;
-    padding: 5px 50px;
+    padding: 8px 50px;
     text-align: end;
     border-bottom: 1px solid #e0e0e0;
+    font-size: 0.9rem;
 }
 
 .nav-one-item {
@@ -159,7 +38,6 @@ form .form-control:focus {
     color: var(--dark-text-color);
     padding-left: 25px;
     font-weight: 500;
-    font-size: 0.9rem;
 }
 
 .custom-navbar-bg {
@@ -170,63 +48,131 @@ form .form-control:focus {
 
 .nav-title {
     color: var(--text-color);
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 700;
     text-decoration: none;
-    margin-right: 50px;
 }
 .nav-title i {
     color: var(--secondary-color);
     margin-right: 8px;
-    vertical-align: -2px;
+    vertical-align: -3px; /* Alinea el ícono con el texto */
 }
 
 .nav-two-item {
-    color: var(--text-color) !important;
+    color: var(--text-color-light) !important;
     font-size: 1.1rem;
     font-weight: 500;
-    text-decoration: none;
     padding: 8px 15px !important;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .dropdown-menu {
     background-color: var(--light-bg-color);
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     border: none;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
 }
 
 .dropdown-item {
     color: var(--dark-text-color);
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-weight: 500;
 }
 
 /* Estilos del buscador */
-.input-group .form-control {
+.search-form-order .form-control {
     border-right: 0;
 }
-.input-group .form-control:focus {
+.search-form-order .form-control:focus {
     box-shadow: none;
     border-color: var(--secondary-color);
 }
-.input-group-text {
+.search-form-order .input-group-text {
     background-color: white;
     border-left: 0;
 }
-#search-suggestions {
-    top: 100%;
-    left: 0;
-    z-index: 1000;
+
+/* ============== CONTENIDO ESPECÍFICO ============== */
+
+/* HERO SECTION */
+.hero-section {
+    min-height: 70vh;
+    background: linear-gradient(120deg, #e9f5e9 0%, #f8f9fa 100%); /* Degradado sutil */
+    position: relative;
+    overflow: hidden;
+    display: flex; 
+    align-items: center;
+}
+.hero-section h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.hero-section .hero-icons i {
+    transition: transform 0.3s ease;
+}
+.hero-section .hero-icons i:hover {
+    transform: scale(1.2) rotate(-5deg);
 }
 
-@media (min-width: 992px) {
-    .search-form-order {
-        order: 0;
-        flex-grow: 0.5;
-        max-width: 300px;
-    }
+/* BENEFIT CARDS */
+.benefit-card {
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(44, 95, 45, 0.12);
+}
+
+/* PLACEHOLDER GRAFICO */
+.placeholder-grafico {
+    border: 2px dashed var(--secondary-color);
+    color: #888;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+}
+/* Asegura que el canvas dentro del placeholder ocupe el espacio */
+.placeholder-grafico canvas {
+    max-height: 400px;
+    width: 100% !important;
+}
+
+/* FAQ ACCORDION */
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: #e9f5e9;
+    font-weight: 700;
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(151, 188, 98, 0.4);
+}
+.accordion-item {
+    border-radius: 0.5rem !important;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+/* BOTÓN IR ARRIBA */
+#btn-ir-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: none; /* Controlado por JS */
+    opacity: 0;    /* Controlado por JS */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(44,95,45,0.2);
+    transition: opacity 0.3s ease-in-out, background-color 0.2s, transform 0.2s;
+    z-index: 1050;
+}
+#btn-ir-arriba:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 /* ============== FOOTER ============== */
@@ -237,6 +183,8 @@ form .form-control:focus {
 .footer-heading {
     color: var(--secondary-color) !important;
     font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 .footer-heading i {
     margin-right: 8px;
@@ -245,21 +193,18 @@ form .form-control:focus {
 .footer-link {
     color: var(--text-color-light);
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 400;
     display: inline-block;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
 }
 
 .custom-footer-bg hr {
-    background-color: rgba(255, 255, 255, 0.15);
-    border: none;
-    height: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 .footer-brand-link {
     text-decoration: none;
     color: var(--secondary-color);
+    font-weight: 700;
 }
 
 .social-icons {
@@ -272,13 +217,127 @@ form .form-control:focus {
     font-size: 1.8rem;
 }
 
-@media (max-width: 767.98px) {
-    .social-icons {
-        justify-content: center;
-        margin-top: 1rem;
+/* ============== MEDIA QUERIES PARA RESPONSIVIDAD ============== */
+@media (max-width: 991.98px) {
+    #nav-one {
+        display: none; /* Ocultar barra superior en tablets y móviles */
     }
-    .text-md-start {
-        text-align: center !important;
+    .custom-navbar-bg {
+        padding: 10px 20px;
+    }
+    .search-form-order {
+        order: 1; /* Mover buscador al final en móvil */
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
+@media (max-width: 767.98px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .footer-heading {
+        text-align: center;
+    }
+    .footer-heading + ul {
+        text-align: center;
+    }
+}
+
+/* ===================================== */
+/* === ESTILOS PARA SECCIÓN BENEFICIOS === */
+/* ===================================== */
+
+/* Estilo para la lista detallada de beneficios */
+.benefits-list li {
+    display: flex; /* Para alinear el ícono con el texto */
+    align-items: flex-start;
+    margin-bottom: 1rem; /* Espacio entre cada punto de la lista */
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.benefits-list i {
+    font-size: 1.5rem; /* Tamaño del ícono de check */
+    color: var(--primary-color); /* Usa el color verde principal */
+    margin-right: 15px; /* Espacio entre el ícono y el texto */
+    margin-top: 5px;
+}
+
+/* Estilo para las tarjetas en la sección de "Explora" */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(44, 95, 45, 0.12);
+}
+
+/* Estilo para la sección de Llamada a la Acción (CTA) */
+.cta-section {
+    background: linear-gradient(45deg, rgba(44, 95, 45, 0.9), rgba(151, 188, 98, 0.9)), url('https://via.placeholder.com/1920x400/cccccc/FFFFFF?text=Fondo+Energético') center center;
+    background-size: cover;
+    color: white;
+    padding: 4rem 1rem;
+}
+
+/* ===================================== */
+/* === ESTILOS PARA ACORDEÓN DE BENEFICIOS === */
+/* ===================================== */
+
+.accordion-flush .accordion-item {
+    border-bottom: 1px solid #e0e0e0; /* Línea de separación sutil */
+}
+
+.accordion-flush .accordion-button {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Elimina la sombra de foco por defecto y usa la tuya */
+.accordion-flush .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+/* Cambia el color de fondo al pasar el mouse */
+.accordion-flush .accordion-button:not(.collapsed):hover {
+    background-color: #eef6ee;
+}
+
+/* Estilo para cuando el botón está colapsado (cerrado) */
+.accordion-flush .accordion-button.collapsed {
+    background-color: transparent;
+}
+
+/* Estilo del ícono dentro del botón del acordeón */
+.accordion-icon {
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+/* Gira el ícono cuando el acordeón está abierto */
+.accordion-button:not(.collapsed) .accordion-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Estilo del cuerpo del acordeón */
+.accordion-body {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
+}

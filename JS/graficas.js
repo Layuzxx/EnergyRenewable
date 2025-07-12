@@ -1,29 +1,29 @@
-/* ========== GRAFICA 1# ========== */
+/* ========== GRAFICA costoComparativoEnergia ========== */
 
-const ctx_1 = document.getElementById('grafica-1');
-const DATA_COUNT_1 = 7;
+const ctx_1 = document.getElementById('costoComparativoEnergia');
+const DATA_COUNT_1 = 1;
 const NUMBER_CFG_1 = {count: DATA_COUNT_1, min: -100, max: 100};
 
-const labels_1 = ["a", "c", "d", "x", "g", "e", "f"];
+const labels_1 = ["Solar Fotovoltaica", "Eólica Terrestre", "Gas (Ciclo Combinado)", "Carbón"];
 const data_1 = {
   labels: labels_1,
   datasets: [
     {
-      label: 'Fully Rounded',
-      data: [1,2,3,23,43,12,12],
-      borderColor: "red",
-      backgroundColor: "rgba(255, 20, 78, 0.5)",
+      label: 'Renovable',
+      data: [40,45,0,0],
+      borderColor: "green",
+      backgroundColor: "rgba(00,255,00,0.5)",
       borderWidth: 2,
-      borderRadius: Number.MAX_VALUE,
+      borderRadius: 2,
       borderSkipped: false,
     },
     {
-      label: 'Small Radius',
-      data: [11,-20,34,30,3,2,15],
-      borderColor: "blue",
-      backgroundColor: "blue",
+      label: 'Fósil',
+      data: [0,0,70,110],
+      borderColor: "black",
+      backgroundColor: "rgba(00,00,00,0.5)",
       borderWidth: 2,
-      borderRadius: 5,
+      borderRadius: 2,
       borderSkipped: false,
     }
   ]
@@ -48,9 +48,46 @@ const config_1 = {
 
 new Chart(ctx_1, config_1)
 
-/* ========== GRAFICA 2# ========== */
+/* ========== GRAFICA crecimientoRenovableMundial ========== */
 
-/* ========== GRAFICA 3# ========== */
+const ctx_2 = document.getElementById('crecimientoRenovableMundial');
+const DATA_COUNT_2 = 1;
+const NUMBER_CFG_2 = {count: DATA_COUNT_1, min: -10000, max: 10000};
+
+const labels_2 = ["1965", "1985", "2000", "2010", "2020", "2025"];
+const data_2 = {
+  labels: labels_2,
+  datasets: [
+    {
+      label: 'Renovable',
+      data: [1,10,70,400,2800,6000],
+      borderColor: "green",
+      backgroundColor: "rgba(00,255,00,0.5)",
+      borderWidth: 2,
+      borderRadius: 2,
+      borderSkipped: false,
+    },
+  ]
+};
+
+const config_2 = {
+  type: 'bar',
+  data: data_2,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Bar Chart'
+      }
+    }
+  },
+};
+
+new Chart(ctx_2, config_2)
 
 /* ========== GRAFICA 4# ========== */
 
