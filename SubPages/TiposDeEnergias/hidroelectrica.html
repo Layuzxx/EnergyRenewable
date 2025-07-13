@@ -1,263 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ============== META CARACTERES ESENCIALES ============== -->
+    <!-- ============== METAETIQUETAS ============== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy Hidroelectrica</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Energía Hidroeléctrica: La Fuerza del Agua - Energy Renewable</title>
 
-    <!-- ============== META CARACTERES PARA SEO ============== -->
-    <meta name="description" content=""> <!-- TODO: FALTA!!-->
-    <meta name="keywords" content=""> <!-- TODO: FALTA!!-->
+    <meta name="description" content="Descubre cómo la energía hidroeléctrica utiliza la fuerza del agua para generar electricidad. Conoce sus tipos, ventajas y su papel histórico y futuro.">
+    <meta name="keywords" content="energía hidroeléctrica, hidroeléctrica, presas, turbinas de agua, energía hidráulica, renovable, central hidroeléctrica">
     <meta name="author" content="Energy Renewable">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"> <!-- TODO: FALTA!!-->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3498db">
 
-    <!-- ============== ESTILOS Y SCRIPTS ============== -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta property="og:title" content="Energía Hidroeléctrica: La Guía Completa - Energy Renewable">
+    <meta property="og:description" content="Aprende cómo el poder del agua se convierte en una de las fuentes de energía renovable más importantes del mundo.">
+    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-hidro.jpg">
+    <meta property="og:url" content="https://www.tudominio.com/SubPages/TiposDeEnergias/hidroelectrica.html">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- ============== ESTILOS Y LIBRERÍAS ============== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <link rel="stylesheet" href="/CSS/fonts.css">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/animations.css">
-    <link rel="stylesheet" href="/CSS/fonts.css">
-    <script src="/JS/script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- ============== GRAFICAS ============== -->  
+    
+    <!-- ============== SCRIPTS DE JS ============== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="/JS/script.js" defer></script>
     <script src="/JS/graficas.js" defer></script>
 </head>
 <body>
-    <header id="header">
-        <nav id="nav-one">
-            <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
-            <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
-        </nav>
-        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
-            <div class="container-fluid">
-                <a class="navbar-brand nav-title" href="/index.html">
-                    <i class="ri-leaf-line"></i> Energy Renewable
-                </a>
-                <form class="d-flex position-relative me-auto search-form-order">
-                    <div class="input-group">
-                        <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
-                        <span class="input-group-text"><i class="ri-search-line"></i></span>
-                    </div>
-                    <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"> <!-- TODO: FALTA!! -->
-                        <li><a class="dropdown-item" href="#">Sugerencia 1: Energía Solar</a></li>
-                        <li><a class="dropdown-item" href="#">Sugerencia 2: Energía Eólica</a></li>
-                        <li><a class="dropdown-item" href="#">Sugerencia 3: Biomasa</a></li>
-                    </ul>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-two-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tipos de Energía</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biogas.html">Energía Biogás</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Energía Biomasa</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Energía Eólica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Energía Geotérmica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Energía Hidroeléctrica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Energía Solar</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="contenido">
-      <!-- 1. Fundamentos de la Energía Hidroeléctrica -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-water-flash-line text-info"></i> Fundamentos de la Energía Hidroeléctrica</h2>
-        <p>
-          La energía hidroeléctrica se obtiene aprovechando la energía cinética y potencial del agua en movimiento, generalmente mediante presas y turbinas. Es la fuente renovable más utilizada a nivel mundial y destaca por su capacidad de almacenamiento y regulación de la red eléctrica.
-        </p>
-      </section>
-
-      <!-- 2. Tipos de Centrales Hidroeléctricas -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-building-4-line text-primary"></i> Tipos de Centrales Hidroeléctricas</h2>
-        <p>
-          Existen centrales de gran escala (presas), de pasada y minihidroeléctricas. Cada tipo se adapta a diferentes condiciones geográficas y necesidades energéticas, variando en impacto ambiental y capacidad de generación.
-        </p>
-        <div class="table-responsive mt-3">
-          <table class="table table-bordered table-hover align-middle">
-            <caption class="text-center">Comparativa de Centrales Hidroeléctricas</caption>
-            <thead class="table-info">
-              <tr>
-                <th>Tipo</th>
-                <th>Capacidad</th>
-                <th>Impacto</th>
-                <th>Aplicación</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Gran escala</td><td>Alta</td><td>Alto</td><td>Red eléctrica nacional</td></tr>
-              <tr><td>De pasada</td><td>Media</td><td>Medio</td><td>Regiones rurales</td></tr>
-              <tr><td>Minihidro</td><td>Baja</td><td>Bajo</td><td>Autoconsumo, comunidades</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- 3. Aplicaciones de la Energía Hidroeléctrica -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-home-gear-line text-success"></i> Aplicaciones de la Energía Hidroeléctrica</h2>
-        <p>
-          Se utiliza para la generación de electricidad a gran escala, regulación de caudales, abastecimiento de agua potable, riego agrícola y control de inundaciones. Su flexibilidad la hace esencial en la gestión de sistemas eléctricos complejos.
-        </p>
-        <div class="row g-4 mt-3">
-          <div class="col-md-4">
-            <div class="card h-100 shadow text-center">
-              <div class="card-body">
-                <i class="ri-building-2-line fs-2 text-info mb-2"></i>
-                <h6 class="fw-bold">Electricidad</h6>
-                <p class="mb-0">Generación continua y de respaldo para la red eléctrica.</p>
+  <!-- ======================================= -->
+  <!-- ============== HEADER ================= -->
+  <!-- ======================================= -->
+  <header id="header">
+      <nav id="nav-one">
+          <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
+          <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
+          <div class="container-fluid">
+              <a class="navbar-brand nav-title" href="/index.html"><i class="ri-leaf-line"></i> Energy Renewable</a>
+              <form class="d-flex position-relative me-auto search-form-order">
+                  <div class="input-group">
+                      <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
+                      <span class="input-group-text"><i class="ri-search-line"></i></span>
+                  </div>
+                  <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"></ul>
+              </form>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle nav-two-item active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Tipos de Energía</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Solar</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Eólica</a></li>
+                            <li><a class="dropdown-item active" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Hidroeléctrica</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Biomasa</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biogas.html">Biogás</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">Evolución</a></li>
+                      <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
+                  </ul>
               </div>
-            </div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100 shadow text-center">
-              <div class="card-body">
-                <i class="ri-water-flash-line fs-2 text-primary mb-2"></i>
-                <h6 class="fw-bold">Riego y Agua Potable</h6>
-                <p class="mb-0">Abastecimiento de agua y riego agrícola sostenible.</p>
-              </div>
+      </nav>
+  </header>
+
+  <!-- ======================================= -->
+  <!-- ============== MAIN CONTENT =========== -->
+  <!-- ======================================= -->
+  <main class="contenido">
+    <!-- HERO SECTION ESPECÍFICO -->
+    <section class="page-hero text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x400/3498DB/FFFFFF?text=Poder+del+Agua') center center/cover no-repeat;">
+      <div class="container">
+        <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInDown">Energía Hidroeléctrica</h1>
+        <p class="lead text-white-50 animate__animated animate__fadeInUp">La fuente renovable original, aprovechando la fuerza incesante de los ríos y corrientes de agua.</p>
+      </div>
+    </section>
+
+    <!-- ¿CÓMO FUNCIONA? -->
+    <section class="container py-5">
+        <div class="text-center mb-5" data-animate="animate__fadeInUp">
+          <h2 class="fw-bold">Del Río a la Red Eléctrica</h2>
+          <p class="lead text-muted">La energía hidroeléctrica es una de las tecnologías renovables más maduras y fiables.</p>
+        </div>
+        <div class="row g-5 align-items-center">
+            <!-- Icono Grande en lugar de la imagen -->
+            <div class="col-lg-6 text-center" data-animate="animate__fadeInLeft">
+                <i class="ri-recycle-line feature-icon-big text-primary"></i>
             </div>
+            <div class="col-lg-6" data-animate="animate__fadeInRight">
+              <h4 class="fw-bold"><i class="ri-refresh-line text-primary"></i> El Ciclo del Agua y la Energía</h4>
+              <p>El principio es transformar la energía potencial del agua almacenada en altura en energía eléctrica:</p>
+              <ol>
+                <li>Una <strong>presa</strong> embalsa el agua de un río, creando un gran depósito y un desnivel.</li>
+                <li>El agua se deja caer a través de una <strong>tubería forzada</strong>, ganando velocidad y energía cinética.</li>
+                <li>El chorro de agua a alta presión golpea las palas de una <strong>turbina</strong>, haciéndola girar a gran velocidad.</li>
+                <li>La turbina está conectada a un <strong>generador</strong> que, al girar, convierte la energía mecánica en electricidad.</li>
+              </ol>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TIPOS DE CENTRALES -->
+    <section class="container py-5 bg-light rounded-3">
+        <div class="text-center mb-5" data-animate="animate__fadeInUp">
+            <h2 class="fw-bold">No Todas las Centrales son Iguales</h2>
+            <p class="lead text-muted">Existen diferentes tipos de centrales hidroeléctricas, cada una adaptada a un entorno y una función.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-animate="animate__fadeInUp"><div class="card h-100 text-center"><div class="card-body"><i class="ri-building-4-line display-4 text-primary mb-3"></i><h5 class="fw-bold">Central de Embalse</h5><p>El tipo más común. Utiliza una gran presa para almacenar agua y regular el flujo, permitiendo generar energía según la demanda.</p></div></div></div>
+            <div class="col-md-4" data-animate="animate__fadeInUp"><div class="card h-100 text-center"><div class="card-body"><i class="ri-waterfall-line display-4 text-success mb-3"></i><h5 class="fw-bold">Central de Pasada</h5><p>No requiere un gran embalse. Desvía parte del caudal del río a través de las turbinas y lo devuelve inmediatamente. Su impacto ambiental es menor, pero depende del flujo constante del río.</p></div></div></div>
+            <div class="col-md-4" data-animate="animate__fadeInUp"><div class="card h-100 text-center"><div class="card-body"><i class="ri-battery-2-charge-line display-4 text-warning mb-3"></i><h5 class="fw-bold">Central de Bombeo</h5><p>Funciona como una "batería de agua". Usa energía barata (ej. solar sobrante) para bombear agua a un embalse superior y la libera para generar electricidad en momentos de alta demanda.</p></div></div></div>
+        </div>
+    </section>
+
+    <!-- GRÁFICO -->
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-animate="animate__fadeInUp">
+                <div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-sm text-center">
+                    <h5 class="text-muted mb-3">Principales Países Productores de Energía Hidroeléctrica</h5>
+                    <canvas id="produccionHidroelectrica"></canvas>
+                    <!-- 
+                        NOTA PARA EL EQUIPO DE GRÁFICOS:
+                        - ID del Canvas: "produccionHidroelectrica".
+                        - Tipo de Gráfico sugerido: Gráfico de barras horizontales.
+                        - Datos a mostrar: Producción anual en Terawatts-hora (TWh) por país.
+                        - EJE Y (labels): ['China', 'Brasil', 'Canadá', 'Estados Unidos', 'Rusia']
+                        - EJE X (data): [1232, 389, 375, 253, 192]
+                    -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENTAJAS Y DESAFÍOS -->
+    <section class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-6" data-animate="animate__fadeInUp">
+                <h3 class="fw-bold mb-3"><i class="ri-thumb-up-line text-success"></i> Ventajas Clave</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="ri-check-line text-success"></i> <strong>Alta Fiabilidad:</strong> Puede generar energía 24/7 de forma constante.</li>
+                    <li class="list-group-item"><i class="ri-check-line text-success"></i> <strong>Bajo Costo Operativo:</strong> Una vez construida, los costos de operación y mantenimiento son muy bajos.</li>
+                    <li class="list-group-item"><i class="ri-check-line text-success"></i> <strong>Larga Vida Útil:</strong> Las centrales pueden operar durante más de 100 años.</li>
+                    <li class="list-group-item"><i class="ri-check-line text-success"></i> <strong>Almacenamiento de Energía:</strong> Las presas funcionan como baterías gigantes, almacenando agua para cuando se necesita.</li>
+                </ul>
+            </div>
+            <div class="col-lg-6" data-animate="animate__fadeInUp">
+                <h3 class="fw-bold mb-3"><i class="ri-error-warning-line text-danger"></i> Desafíos a Considerar</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="ri-close-line text-danger"></i> <strong>Alto Impacto Ambiental:</strong> La construcción de grandes presas altera ecosistemas y puede inundar grandes áreas.</li>
+                    <li class="list-group-item"><i class="ri-close-line text-danger"></i> <strong>Impacto Social:</strong> Puede causar el desplazamiento de comunidades enteras.</li>
+                    <li class="list-group-item"><i class="ri-close-line text-danger"></i> <strong>Elevado Costo Inicial:</strong> La inversión para construir una presa es extremadamente alta.</li>
+                    <li class="list-group-item"><i class="ri-close-line text-danger"></i> <strong>Dependencia Geográfica:</strong> Solo es viable en zonas con ríos y desniveles adecuados.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA A LA CALCULADORA -->
+    <section class="cta-section text-center py-5" data-animate="animate__fadeIn">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-white">Compara el potencial de las renovables</h2>
+            <p class="lead text-white-50 mb-4">La hidroelectricidad es para grandes proyectos, pero puedes ver cómo se compara tu consumo con el potencial de otras tecnologías como la solar.</p>
+            <a href="/SubPages/calculadora.html" class="btn btn-warning btn-lg shadow-lg">Ir a la Calculadora <i class="ri-arrow-right-line"></i></a>
+        </div>
+    </section>
+  </main>
+
+  <!-- ======================================= -->
+  <!-- ============== FOOTER ================= -->
+  <!-- ======================================= -->
+  <footer class="custom-footer-bg text-white pt-5 pb-4">
+      <div class="container text-center text-md-start">
+          <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100 shadow text-center">
-              <div class="card-body">
-                <i class="ri-shield-check-line fs-2 text-success mb-2"></i>
-                <h6 class="fw-bold">Control de Inundaciones</h6>
-                <p class="mb-0">Gestión de caudales y prevención de desastres.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. Impacto Ambiental y Social -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-leaf-line text-success"></i> Impacto Ambiental y Social</h2>
-        <p>
-          La energía hidroeléctrica no emite gases contaminantes durante su operación, pero puede afectar ecosistemas acuáticos, desplazar comunidades y modificar paisajes. La planificación y la gestión ambiental son esenciales para minimizar estos impactos.
-        </p>
-        <div class="placeholder-grafico p-3 mt-3">
-          <canvas id="grafica-9"></canvas>
-        </div>
-      </section>
-
-      <!-- 5. Innovaciones en Hidroeléctrica -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-lightbulb-flash-line text-info"></i> Innovaciones en Hidroeléctrica</h2>
-        <p>
-          Las innovaciones incluyen turbinas de bajo impacto, sistemas de bombeo reversible, integración con energías renovables variables y monitorización ambiental avanzada. Estas tecnologías mejoran la eficiencia y reducen el impacto ecológico.
-        </p>
-      </section>
-
-      <!-- 6. Desafíos de la Energía Hidroeléctrica -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-error-warning-line text-danger"></i> Desafíos de la Energía Hidroeléctrica</h2>
-        <p>
-          Los principales retos son la gestión de sedimentos, la variabilidad hidrológica, el impacto social y la competencia por el uso del agua. La innovación, la regulación y la participación comunitaria son claves para superar estos desafíos.
-        </p>
-        <div class="table-responsive mt-3">
-          <table class="table table-bordered table-hover align-middle">
-            <caption class="text-center">Principales Desafíos y Soluciones</caption>
-            <thead class="table-danger">
-              <tr>
-                <th>Desafío</th>
-                <th>Solución Propuesta</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Gestión de sedimentos</td><td>Tecnologías de limpieza, diseño de presas</td></tr>
-              <tr><td>Impacto social</td><td>Participación comunitaria, compensaciones</td></tr>
-              <tr><td>Variabilidad hidrológica</td><td>Modelos predictivos, integración renovable</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- 7. Proyecciones Futuras -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-line-chart-line text-secondary"></i> Proyecciones Futuras</h2>
-        <p>
-          Se espera que la energía hidroeléctrica mantenga un papel clave en la transición energética, especialmente como respaldo para otras renovables. Para 2050, seguirá siendo la principal fuente de almacenamiento energético a gran escala.
-        </p>
-        <div class="placeholder-grafico p-3 mt-3">
-          <canvas id="grafica-10"></canvas>
-        </div>
-      </section>
-    </main>
-
-    <footer class="custom-footer-bg text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row mt-3">
-                <!-- Columna de la empresa -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">
-                        <i class="ri-leaf-line"></i> Energy Renewable
-                    </h5>
-                    <p>
-                        Comprometidos con un futuro más verde, ofrecemos información y herramientas sobre energías renovables para un planeta sostenible.
-                    </p>
-                </div>
-                <!-- Columna de Energías -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li>
-                    </ul>
-                </div>
-                <!-- Columna de Soporte -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li>
-                        <li><a href="/SubPages/Suport/help-center.html" class="footer-link">Centro de Ayuda</a></li>
-                        <li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li>
-                        <li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li>
-                    </ul>
-                </div>
-                <!-- Columna de Redes Sociales -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5>
-                    <div class="social-icons">
-                        <a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-                        <a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-                        <a href="#" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="mb-4">
-            <div class="row align-items-center">
-                <div class="col-12 text-center">
-                    <p class="mb-0">© 2025 Todos los derechos reservados por 
-                        <a href="/index.html" class="footer-brand-link">
-                        <strong>Energy Renewable</strong>
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+          <hr class="mb-4">
+          <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
+      </div>
+  </footer>
 </body>
 </html>

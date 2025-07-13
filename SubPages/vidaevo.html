@@ -1,259 +1,305 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ============== META CARACTERES ESENCIALES ============== -->
+    <!-- ============== METAETIQUETAS ============== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VidaEvo</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evolución de las Energías Renovables - Energy Renewable</title>
 
-    <!-- ============== META CARACTERES PARA SEO ============== -->
-    <meta name="description" content=""> <!-- TODO: FALTA!!-->
-    <meta name="keywords" content=""> <!-- TODO: FALTA!!-->
+    <meta name="description" content="Explora la fascinante historia de las energías renovables a través de nuestra línea de tiempo interactiva, desde los molinos antiguos hasta la tecnología del futuro.">
+    <meta name="keywords" content="historia energías renovables, evolución energía, línea de tiempo, cronología, energía solar, energía eólica">
     <meta name="author" content="Energy Renewable">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"> <!-- TODO: FALTA!!-->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2C5F2D">
 
-    <!-- ============== ESTILOS Y SCRIPTS ============== -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta property="og:title" content="Un Viaje en el Tiempo: La Evolución de las Energías Renovables">
+    <meta property="og:description" content="Explora los hitos clave en la historia de la energía limpia.">
+    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-evo.jpg">
+    <meta property="og:url" content="https://www.tudominio.com/SubPages/vidaevo.html">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- ============== ESTILOS Y LIBRERÍAS ============== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <link rel="stylesheet" href="/CSS/fonts.css">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/animations.css">
-    <link rel="stylesheet" href="/CSS/fonts.css">
+    
+    <!-- ============== SCRIPTS DE JS ============== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
     <script src="/JS/script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- ============== GRAFICAS ============== -->  
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="/JS/graficas.js" defer></script>
 </head>
 <body>
-    <header id="header">
-        <nav id="nav-one">
-            <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
-            <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
-        </nav>
-        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
-            <div class="container-fluid">
-                <a class="navbar-brand nav-title" href="/index.html">
-                    <i class="ri-leaf-line"></i> Energy Renewable
-                </a>
-                <form class="d-flex position-relative me-auto search-form-order">
-                    <div class="input-group">
-                        <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
-                        <span class="input-group-text"><i class="ri-search-line"></i></span>
-                    </div>
-                    <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"> <!-- TODO: FALTA!! -->
-                        <li><a class="dropdown-item" href="#">Sugerencia 1: Energía Solar</a></li>
-                        <li><a class="dropdown-item" href="#">Sugerencia 2: Energía Eólica</a></li>
-                        <li><a class="dropdown-item" href="#">Sugerencia 3: Biomasa</a></li>
-                    </ul>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-two-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tipos de Energía</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biogas.html">Energía Biogás</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Energía Biomasa</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Energía Eólica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Energía Geotérmica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Energía Hidroeléctrica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Energía Solar</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a>
-                        </li>
-                    </ul>
+  <!-- ======================================= -->
+  <!-- ============== HEADER ================= -->
+  <!-- ======================================= -->
+  <header id="header">
+    <nav id="nav-one">
+        <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
+        <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-title" href="/index.html"><i class="ri-leaf-line"></i> Energy Renewable</a>
+            <form class="d-flex position-relative me-auto search-form-order">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
+                    <span class="input-group-text"><i class="ri-search-line"></i></span>
                 </div>
+                <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"></ul>
+            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-two-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Tipos de Energía</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Solar</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Eólica</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Hidroeléctrica</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Biomasa</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biogas.html">Biogás</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link nav-two-item active" href="/SubPages/vidaevo.html">Evolución</a></li>
+                    <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+  </header>
 
-    <main class="contenido">
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-5 text-center"><i class="ri-timeline-view text-success"></i> Línea de Tiempo: Evolución de las Energías Renovables (1965-2025)</h2>
-        <div class="timeline-container position-relative">
-          <div class="timeline">
-            <!-- 1965-1979: Primeros avances y conciencia ambiental -->
-            <div class="timeline-item left animate__animated">
-              <div class="timeline-dot bg-success"></div>
-              <div class="timeline-content shadow">
-                <h5>1965-1979 <i class="ri-seedling-line text-success"></i></h5>
-                <ul>
-                  <li>1965: Primeras investigaciones sobre energía solar y eólica a nivel experimental.</li>
-                  <li>1973: Crisis del petróleo impulsa la búsqueda de fuentes alternativas.</li>
-                  <li>1978: EE.UU. promulga la Public Utility Regulatory Policies Act (PURPA), incentivando renovables.</li>
-                </ul>
-              </div>
-            </div>
-            <!-- 1980-1989: Primeras instalaciones comerciales -->
-            <div class="timeline-item right animate__animated">
-              <div class="timeline-dot bg-info"></div>
-              <div class="timeline-content shadow">
-                <h5>1980-1989 <i class="ri-windy-line text-info"></i></h5>
-                <ul>
-                  <li>1980: Primer parque eólico comercial en California.</li>
-                  <li>1983: Desarrollo de paneles solares fotovoltaicos más eficientes.</li>
-                  <li>1987: Primeras plantas de biomasa a escala industrial.</li>
-                </ul>
-              </div>
-            </div>
-            <!-- 1990-1999: Expansión y políticas globales -->
-            <div class="timeline-item left animate__animated">
-              <div class="timeline-dot bg-warning"></div>
-              <div class="timeline-content shadow">
-                <h5>1990-1999 <i class="ri-earth-line text-warning"></i></h5>
-                <ul>
-                  <li>1992: Cumbre de la Tierra en Río, impulso global a las renovables.</li>
-                  <li>1997: Protocolo de Kioto, compromisos de reducción de emisiones.</li>
-                  <li>1999: Primeras plantas solares de gran escala en Europa.</li>
-                </ul>
-              </div>
-            </div>
-            <!-- 2000-2009: Innovación y crecimiento acelerado -->
-            <div class="timeline-item right animate__animated">
-              <div class="timeline-dot bg-primary"></div>
-              <div class="timeline-content shadow">
-                <h5>2000-2009 <i class="ri-flashlight-line text-primary"></i></h5>
-                <ul>
-                  <li>2001: Alemania lanza la Ley de Energías Renovables (EEG).</li>
-                  <li>2005: China inicia su expansión eólica y solar.</li>
-                  <li>2009: Se superan los 100 GW de capacidad renovable instalada mundialmente.</li>
-                </ul>
-              </div>
-            </div>
-            <!-- 2010-2019: Renovables como protagonistas -->
-            <div class="timeline-item left animate__animated">
-              <div class="timeline-dot bg-danger"></div>
-              <div class="timeline-content shadow">
-                <h5>2010-2019 <i class="ri-bar-chart-grouped-line text-danger"></i></h5>
-                <ul>
-                  <li>2011: Japón impulsa renovables tras el accidente de Fukushima.</li>
-                  <li>2015: Acuerdo de París, compromiso global con la descarbonización.</li>
-                  <li>2018: La energía solar se convierte en la fuente más barata en muchos países.</li>
-                </ul>
-              </div>
-            </div>
-            <!-- 2020-2025: Innovación, integración y futuro sostenible -->
-            <div class="timeline-item right animate__animated">
-              <div class="timeline-dot bg-secondary"></div>
-              <div class="timeline-content shadow">
-                <h5>2020-2025 <i class="ri-line-chart-line text-secondary"></i></h5>
-                <ul>
-                  <li>2020: Las renovables superan al carbón en generación eléctrica global.</li>
-                  <li>2022: Avances en almacenamiento y redes inteligentes.</li>
-                  <li>2025: Proyección de más del 40% de la electricidad mundial proveniente de renovables.</li>
-                </ul>
-              </div>
-            </div>
+  <!-- ======================================= -->
+  <!-- ============== MAIN CONTENT =========== -->
+  <!-- ======================================= -->
+  <main class="contenido">
+    <!-- HERO SECTION -->
+    <section class="about-hero text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Un Viaje a Través del Tiempo</h1>
+        <p class="lead text-muted animate__animated animate__fadeInUp">La historia de las energías renovables es tan antigua como la civilización misma, pero su momento es ahora.</p>
+      </div>
+    </section>
+
+    <!-- LÍNEA DE TIEMPO -->
+    <section class="container py-5">
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        
+        <!-- Hito 1: Antigüedad -->
+        <div class="timeline-item left" data-animate="animate__fadeInUp">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5 class="fw-bold"><i class="ri-ancient-gate-line"></i> Antigüedad – 700 d.C.</h5>
+            <p class="mb-0">Las primeras civilizaciones utilizan la energía del agua (norias) para moler grano y la energía del viento (velas, molinos) para la navegación y la agricultura.</p>
           </div>
         </div>
-        <div class="text-center mt-5">
-          <span class="badge bg-success fs-6">Haz scroll para explorar la evolución de las energías renovables</span>
-        </div>
-      </section>
-      <style>
-        .timeline-container { padding: 0 0.5rem; }
-        .timeline { position: relative; max-width: 900px; margin: 0 auto; }
-        .timeline::after { content: ''; position: absolute; width: 4px; background: #97BC62FF; top: 0; bottom: 0; left: 50%; margin-left: -2px; }
-        .timeline-item { padding: 1.5rem 0; position: relative; width: 50%; }
-        .timeline-item.left { left: 0; }
-        .timeline-item.right { left: 50%; }
-        .timeline-content { background: #fff; border-radius: 1rem; padding: 1.2rem 1.5rem; position: relative; box-shadow: 0 4px 24px rgba(44,95,45,0.08); }
-        .timeline-dot { position: absolute; top: 32px; width: 22px; height: 22px; border-radius: 50%; left: 100%; margin-left: -11px; border: 3px solid #fff; z-index: 1; box-shadow: 0 0 0 4px #f3f3f3; }
-        .timeline-item.right .timeline-dot { left: -11px; }
-        .timeline-item.left .timeline-content { margin-left: 40px; }
-        .timeline-item.right .timeline-content { margin-right: 40px; }
-        @media (max-width: 767.98px) {
-          .timeline::after { left: 8px; }
-          .timeline-item { width: 100%; left: 0 !important; padding-left: 2.5rem; }
-          .timeline-item.right .timeline-dot { left: 0; }
-          .timeline-item.left .timeline-dot { left: 0; }
-          .timeline-item .timeline-content { margin: 0 0 0 40px; }
-        }
-      </style>
-      <script>
-        // Animación de aparición al hacer scroll
-        document.addEventListener('scroll', function() {
-          document.querySelectorAll('.timeline-item').forEach(function(item) {
-            var rect = item.getBoundingClientRect();
-            if(rect.top < window.innerHeight - 100) {
-              item.classList.add('animate__fadeInUp');
-            }
-          });
-        });
-        // Inicializar animación al cargar
-        document.querySelectorAll('.timeline-item').forEach(function(item) {
-          var rect = item.getBoundingClientRect();
-          if(rect.top < window.innerHeight - 100) {
-            item.classList.add('animate__fadeInUp');
-          }
-        });
-      </script>
-    </main>
 
-    <footer class="custom-footer-bg text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row mt-3">
-                <!-- Columna de la empresa -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">
-                        <i class="ri-leaf-line"></i> Energy Renewable
-                    </h5>
-                    <p>
-                        Comprometidos con un futuro más verde, ofrecemos información y herramientas sobre energías renovables para un planeta sostenible.
-                    </p>
-                </div>
-                <!-- Columna de Energías -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li>
-                    </ul>
-                </div>
-                <!-- Columna de Soporte -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li>
-                        <li><a href="/SubPages/Suport/help-center.html" class="footer-link">Centro de Ayuda</a></li>
-                        <li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li>
-                        <li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li>
-                    </ul>
-                </div>
-                <!-- Columna de Redes Sociales -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5>
-                    <div class="social-icons">
-                        <a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-                        <a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-                        <a href="#" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="mb-4">
-            <div class="row align-items-center">
-                <div class="col-12 text-center">
-                    <p class="mb-0">© 2025 Todos los derechos reservados por 
-                        <a href="/index.html" class="footer-brand-link">
-                        <strong>Energy Renewable</strong>
-                        </a>
-                    </p>
-                </div>
+        <!-- Hito 2: Descubrimiento Científico -->
+        <div class="timeline-item right" data-animate="animate__fadeInUp">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5 class="fw-bold"><i class="ri-flask-line"></i> 1839</h5>
+            <p class="mb-0">El físico francés Edmond Becquerel descubre el **efecto fotovoltaico**, observando que ciertos materiales producen una corriente eléctrica al ser expuestos a la luz. Es la base de la energía solar moderna.</p>
+          </div>
+        </div>
+
+        <!-- Hito 3: Primeras Aplicaciones -->
+        <div class="timeline-item left" data-animate="animate__fadeInUp">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5 class="fw-bold"><i class="ri-tools-line"></i> 1880s</h5>
+              <p class="mb-0">Charles Brush en EE. UU. construye la primera turbina eólica gigante para generar electricidad. En paralelo, se desarrollan las primeras plantas de energía solar térmica para producir vapor.</p>
             </div>
         </div>
-    </footer>
+
+        <!-- Hito 4: La Célula Solar Moderna -->
+        <div class="timeline-item right" data-animate="animate__fadeInUp">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5 class="fw-bold"><i class="ri-cpu-line"></i> 1954</h5>
+              <p class="mb-0">Los científicos de Bell Labs (Daryl Chapin, Calvin Fuller y Gerald Pearson) crean la **primera célula solar de silicio práctica**, con una eficiencia del 6%. Este avance es crucial para la era espacial y el futuro de la energía solar.</p>
+            </div>
+        </div>
+        
+        <!-- Hito 5: La Crisis del Petróleo -->
+        <div class="timeline-item left" data-animate="animate__fadeInUp">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5 class="fw-bold"><i class="ri-gas-station-line"></i> 1973</h5>
+            <p class="mb-0">La crisis mundial del petróleo provoca un aumento drástico de los precios de la energía y genera un interés global sin precedentes en la búsqueda de fuentes de energía alternativas y la independencia energética.</p>
+          </div>
+        </div>
+
+        <!-- Hito 6: Primeros Parques Eólicos -->
+        <div class="timeline-item right" data-animate="animate__fadeInUp">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5 class="fw-bold"><i class="ri-windy-line"></i> 1980</h5>
+            <p class="mb-0">Se construye en New Hampshire, EE. UU., el primer **parque eólico comercial** del mundo, marcando el inicio de la generación de energía eólica a gran escala.</p>
+          </div>
+        </div>
+
+        <!-- Hito 7: Acuerdos Globales -->
+        <div class="timeline-item left" data-animate="animate__fadeInUp">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5 class="fw-bold"><i class="ri-earth-line"></i> 1997</h5>
+              <p class="mb-0">Se firma el **Protocolo de Kioto**, el primer gran acuerdo internacional que establece objetivos vinculantes para que los países industrializados reduzcan sus emisiones de gases de efecto invernadero.</p>
+            </div>
+        </div>
+
+        <!-- Hito 8: La Década del Despegue -->
+        <div class="timeline-item right" data-animate="animate__fadeInUp">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5 class="fw-bold"><i class="ri-line-chart-line"></i> 2010s</h5>
+            <p class="mb-0">La "década solar". Los costos de la energía solar fotovoltaica caen más de un 80%, convirtiéndola en la fuente de energía más barata en muchas regiones del mundo y desencadenando una explosión en su instalación.</p>
+          </div>
+        </div>
+        
+        <!-- Hito 9: El Acuerdo de París -->
+        <div class="timeline-item left" data-animate="animate__fadeInUp">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5 class="fw-bold"><i class="ri-global-line"></i> 2015</h5>
+              <p class="mb-0">Se firma el **Acuerdo de París**, un pacto histórico donde casi 200 países se comprometen a limitar el calentamiento global muy por debajo de los 2°C, acelerando la transición hacia las energías renovables.</p>
+            </div>
+        </div>
+
+        <!-- Hito 10: Presente y Futuro -->
+        <div class="timeline-item right" data-animate="animate__fadeInUp">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5 class="fw-bold"><i class="ri-rocket-2-line"></i> 2020s y Más Allá</h5>
+            <p class="mb-0">Las renovables superan al carbón en la generación eléctrica de la UE. El enfoque se centra en el almacenamiento masivo (baterías, hidrógeno verde), las redes inteligentes y la economía circular para reciclar paneles y turbinas.</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================= -->
+  <!-- ============== FOOTER ================= -->
+  <!-- ======================================= -->
+  <footer class="custom-footer-bg text-white pt-5 pb-4">
+      <div class="container text-center text-md-start">
+          <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
+          </div>
+          <hr class="mb-4">
+          <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
+      </div>
+  </footer>
+
+  <!-- ESTILOS CSS PARA LA LÍNEA DE TIEMPO (incluidos aquí para facilidad de uso) -->
+  <style>
+    .timeline-container {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #e9ecef;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 1rem 2.5rem;
+    }
+    .timeline-item.left {
+      left: 0;
+    }
+    .timeline-item.right {
+      left: 50%;
+    }
+    .timeline-dot {
+      position: absolute;
+      top: 1.5rem;
+      width: 20px;
+      height: 20px;
+      background: var(--primary-color);
+      border: 4px solid var(--light-bg-color);
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item.left .timeline-dot {
+      right: -10px;
+    }
+    .timeline-item.right .timeline-dot {
+      left: -10px;
+    }
+    .timeline-content {
+      position: relative;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: .5rem;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .timeline-content::before { /* Flecha/puntero */
+      content: '';
+      position: absolute;
+      top: 1.5rem;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    .timeline-item.left .timeline-content::before {
+      right: -10px;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #fff;
+    }
+    .timeline-item.right .timeline-content::before {
+      left: -10px;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #fff transparent transparent;
+    }
+
+    /* Media Query para responsividad en móviles */
+    @media (max-width: 991.98px) {
+      .timeline-line {
+        left: 20px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 1rem;
+      }
+      .timeline-item.right {
+        left: 0;
+      }
+      .timeline-dot {
+        left: 10px;
+      }
+      .timeline-item.left .timeline-dot, .timeline-item.right .timeline-dot {
+        left: 11px;
+      }
+      .timeline-item.left .timeline-content::before, .timeline-item.right .timeline-content::before {
+        left: -10px;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #fff transparent transparent;
+      }
+    }
+  </style>
 </body>
 </html>

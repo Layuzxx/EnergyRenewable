@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ============== META CARACTERES ESENCIALES ============== -->
+    <!-- ============== METAETIQUETAS ============== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energia Biogas</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Energía de Biogás: Reciclando para un Futuro Energético - Energy Renewable</title>
 
-    <!-- ============== META CARACTERES PARA SEO ============== -->
-    <meta name="description" content=""> <!-- TODO: FALTA!!-->
-    <meta name="keywords" content=""> <!-- TODO: FALTA!!-->
+    <meta name="description" content="Descubre qué es el biogás, cómo se produce a partir de residuos orgánicos mediante la digestión anaerobia, y cuáles son sus aplicaciones y beneficios.">
+    <meta name="keywords" content="biogás, digestión anaerobia, biometano, energía de residuos, metano, renovable">
     <meta name="author" content="Energy Renewable">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"> <!-- TODO: FALTA!!-->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#97BC62">
 
-    <!-- ============== ESTILOS Y SCRIPTS ============== -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta property="og:title" content="Energía de Biogás: La Guía Completa - Energy Renewable">
+    <meta property="og:description" content="Aprende cómo el reciclaje de materia orgánica se convierte en una valiosa fuente de energía.">
+    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-biogas.jpg">
+    <meta property="og:url" content="https://www.tudominio.com/SubPages/TiposDeEnergias/biogas.html">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- ============== ESTILOS Y LIBRERÍAS ============== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <link rel="stylesheet" href="/CSS/fonts.css">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/animations.css">
-    <link rel="stylesheet" href="/CSS/fonts.css">
-    <script src="/JS/script.js" defer></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- ============== GRAFICAS ============== -->  
+    <!-- ============== SCRIPTS DE JS ============== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="/JS/script.js" defer></script>
     <script src="/JS/graficas.js" defer></script>
 </head>
 <body>
+    <!-- ======================================= -->
+    <!-- ============== HEADER ================= -->
+    <!-- ======================================= -->
     <header id="header">
         <nav id="nav-one">
             <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
@@ -36,228 +48,151 @@
         </nav>
         <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
             <div class="container-fluid">
-                <a class="navbar-brand nav-title" href="/index.html">
-                    <i class="ri-leaf-line"></i> Energy Renewable
-                </a>
+                <a class="navbar-brand nav-title" href="/index.html"><i class="ri-leaf-line"></i> Energy Renewable</a>
                 <form class="d-flex position-relative me-auto search-form-order">
                     <div class="input-group">
                         <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
                         <span class="input-group-text"><i class="ri-search-line"></i></span>
                     </div>
-                    <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"> <!-- TODO: FALTA!! -->
-                        <li><a class="dropdown-item" href="#">Sugerencia 1: Energía Solar</a></li>
-                        <li><a class="dropdown-item" href="#">Sugerencia 2: Energía Eólica</a></li>
-                        <li><a class="dropdown-item" href="#">Sugerencia 3: Biomasa</a></li>
-                    </ul>
+                    <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"></ul>
                 </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-two-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tipos de Energía</a>
+                            <a class="nav-link dropdown-toggle nav-two-item active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Tipos de Energía</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biogas.html">Energía Biogás</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Energía Biomasa</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Energía Eólica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Energía Geotérmica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Energía Hidroeléctrica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Energía Solar</a></li>
+                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Solar</a></li>
+                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Eólica</a></li>
+                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Hidroeléctrica</a></li>
+                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Biomasa</a></li>
+                                <li><a class="dropdown-item active" href="/SubPages/TiposDeEnergias/biogas.html">Biogás</a></li>
+                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">Evolución</a></li>
+                        <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
+    <!-- ======================================= -->
+    <!-- ============== MAIN CONTENT =========== -->
+    <!-- ======================================= -->
     <main class="contenido">
-      <!-- 1. Fundamentos del Biogás -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-bubble-chart-line text-success"></i> Fundamentos del Biogás</h2>
-        <p>
-          El biogás es un gas renovable producido por la descomposición anaerobia de materia orgánica, como residuos agrícolas, estiércol, lodos de depuradora y residuos urbanos. Su principal componente es el metano, lo que lo convierte en una fuente energética versátil y sostenible.
-        </p>
-      </section>
-
-      <!-- 2. Proceso de Producción de Biogás -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-flask-line text-primary"></i> Proceso de Producción de Biogás</h2>
-        <p>
-          La producción de biogás se realiza en digestores anaerobios, donde microorganismos descomponen la materia orgánica en ausencia de oxígeno. El proceso genera biogás y un residuo sólido llamado digestato, útil como fertilizante.
-        </p>
-        <div class="table-responsive mt-3">
-          <table class="table table-bordered table-hover align-middle">
-            <caption class="text-center">Etapas del Proceso Anaerobio</caption>
-            <thead class="table-success">
-              <tr>
-                <th>Etapa</th>
-                <th>Descripción</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Hidrólisis</td><td>Descomposición de moléculas complejas en simples</td></tr>
-              <tr><td>Acidogénesis</td><td>Conversión de moléculas simples en ácidos grasos</td></tr>
-              <tr><td>Acetogénesis</td><td>Formación de acetato, CO2 e hidrógeno</td></tr>
-              <tr><td>Metanogénesis</td><td>Producción de metano y CO2</td></tr>
-            </tbody>
-          </table>
+        <!-- HERO SECTION ESPECÍFICO -->
+        <section class="page-hero text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x400/97BC62/FFFFFF?text=Energía+de+Residuos') center center/cover no-repeat;">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInDown">Energía de Biogás</h1>
+            <p class="lead text-white-50 animate__animated animate__fadeInUp">Un gas renovable generado a partir del reciclaje de materia orgánica, clave en la economía circular.</p>
         </div>
-      </section>
+        </section>
 
-      <!-- 3. Aplicaciones del Biogás -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-gas-station-line text-warning"></i> Aplicaciones del Biogás</h2>
-        <p>
-          El biogás se utiliza para la generación de electricidad y calor, como combustible vehicular (biometano) y en procesos industriales. Su uso contribuye a la gestión de residuos y a la reducción de emisiones de gases de efecto invernadero.
-        </p>
-        <div class="row g-4 mt-3">
-          <div class="col-md-4">
-            <div class="card h-100 shadow text-center">
-              <div class="card-body">
-                <i class="ri-flashlight-line fs-2 text-success mb-2"></i>
-                <h6 class="fw-bold">Electricidad y Calor</h6>
-                <p class="mb-0">Cogeneración en plantas industriales y agrícolas.</p>
-              </div>
+    <!-- ¿QUÉ ES EL BIOGÁS? -->
+    <section class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6" data-animate="animate__fadeInLeft">
+                <h2 class="fw-bold"><i class="ri-bubble-chart-line text-success"></i> La Alquimia de la Descomposición</h2>
+                <p class="lead">El biogás es una mezcla de gases, principalmente metano (CH₄) y dióxido de carbono (CO₂), producida por la descomposición de materia orgánica en ausencia de oxígeno.</p>
+                <p>Este proceso, conocido como **digestión anaerobia**, es llevado a cabo por microorganismos que "digieren" los residuos, liberando biogás como subproducto. Es, en esencia, una forma de replicar y acelerar un proceso que ocurre naturalmente en pantanos o en el sistema digestivo de algunos animales.</p>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 shadow text-center">
-              <div class="card-body">
-                <i class="ri-truck-line fs-2 text-primary mb-2"></i>
-                <h6 class="fw-bold">Combustible Vehicular</h6>
-                <p class="mb-0">Biometano para transporte público y privado.</p>
-              </div>
+            <div class="col-lg-6 text-center" data-animate="animate__fadeInRight">
+                <i class="ri-flask-line feature-icon-big text-success"></i>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 shadow text-center">
-              <div class="card-body">
-                <i class="ri-leaf-line fs-2 text-success mb-2"></i>
-                <h6 class="fw-bold">Fertilizante</h6>
-                <p class="mb-0">Digestato como abono orgánico para suelos agrícolas.</p>
-              </div>
+        </div>
+    </section>
+    
+    <!-- EL PROCESO DE DIGESTIÓN ANAEROBIA -->
+    <section class="container py-5 bg-light rounded-3">
+        <div class="text-center mb-5" data-animate="animate__fadeInUp">
+            <h2 class="fw-bold">El Proceso: De Residuo a Energía</h2>
+            <p class="lead text-muted">La producción de biogás ocurre en cuatro etapas clave dentro de un biodigestor.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-animate="animate__fadeInUp"><div class="card h-100 text-center"><div class="card-body"><h4 class="fw-bold text-primary">1. Hidrólisis</h4><p>Las moléculas orgánicas complejas (proteínas, grasas) se rompen en compuestos más simples.</p></div></div></div>
+            <div class="col-md-6 col-lg-3" data-animate="animate__fadeInUp"><div class="card h-100 text-center"><div class="card-body"><h4 class="fw-bold text-primary">2. Acidogénesis</h4><p>Las bacterias convierten los compuestos simples en ácidos grasos volátiles.</p></div></div></div>
+            <div class="col-md-6 col-lg-3" data-animate="animate__fadeInUp"><div class="card h-100 text-center"><div class="card-body"><h4 class="fw-bold text-primary">3. Acetogénesis</h4><p>Otras bacterias transforman los ácidos grasos en acetato, hidrógeno y CO₂.</p></div></div></div>
+            <div class="col-md-6 col-lg-3" data-animate="animate__fadeInUp"><div class="card h-100 text-center"><div class="card-body"><h4 class="fw-bold text-primary">4. Metanogénesis</h4><p>Finalmente, los microorganismos metanogénicos producen metano (CH₄), el principal componente energético del biogás.</p></div></div></div>
+        </div>
+    </section>
+
+    <!-- GRÁFICOS -->
+    <section class="container py-5">
+        <div class="row g-5">
+            <!-- Gráfico 1: Composición del Biogás -->
+            <div class="col-lg-6" data-animate="animate__fadeInUp">
+                <div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-sm text-center">
+                    <h5 class="text-muted mb-3">Composición Típica del Biogás</h5>
+                    <canvas id="composicionBiogas"></canvas>
+                    <!-- 
+                        NOTA PARA EL EQUIPO DE GRÁFICOS:
+                        - ID del Canvas: "composicionBiogas".
+                        - Tipo de Gráfico sugerido: Gráfico de pastel (pie) o dona (doughnut).
+                        - Datos a mostrar: Porcentaje de cada gas en el biogás crudo.
+                        - LABELS: ['Metano (CH₄)', 'Dióxido de Carbono (CO₂)', 'Otros Gases']
+                        - DATA: [60, 35, 5]
+                    -->
+                </div>
             </div>
-          </div>
+            <!-- Gráfico 2: Potencial de Producción -->
+            <div class="col-lg-6" data-animate="animate__fadeInUp">
+                <div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-sm text-center">
+                    <h5 class="text-muted mb-3">Potencial de Biogás por Residuo</h5>
+                    <canvas id="potencialBiogas"></canvas>
+                    <!-- 
+                        NOTA PARA EL EQUIPO DE GRÁFICOS:
+                        - ID del Canvas: "potencialBiogas".
+                        - Tipo de Gráfico sugerido: Gráfico de barras.
+                        - Datos a mostrar: m³ de biogás por tonelada de residuo.
+                        - EJE X (labels): ['Estiércol Vacuno', 'Residuos de Comida', 'Lodos de Depuradora']
+                        - EJE Y (data): [50, 120, 40]
+                    -->
+                </div>
+            </div>
         </div>
-      </section>
-
-      <!-- 4. Impacto Ambiental y Beneficios -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-leaf-line text-success"></i> Impacto Ambiental y Beneficios</h2>
-        <p>
-          El biogás reduce la emisión de metano a la atmósfera, mejora la gestión de residuos y disminuye la dependencia de combustibles fósiles. Además, el digestato aporta nutrientes al suelo, cerrando el ciclo de la materia orgánica.
-        </p>
-        <div class="placeholder-grafico p-3 mt-3">
-          <canvas id="grafica-1"></canvas>
+    </section>
+    
+    <!-- VENTAJAS Y DESAFÍOS -->
+    <section class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-6" data-animate="animate__fadeInUp">
+                <h3 class="fw-bold mb-3"><i class="ri-thumb-up-line text-success"></i> Ventajas Clave</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="ri-check-line text-success"></i> <strong>Gestión de Residuos:</strong> Transforma un problema ambiental y sanitario en un recurso valioso.</li>
+                    <li class="list-group-item"><i class="ri-check-line text-success"></i> <strong>Energía Gestionable:</strong> El gas se puede almacenar y usar para generar electricidad o calor bajo demanda.</li>
+                    <li class="list-group-item"><i class="ri-check-line text-success"></i> <strong>Reducción de Emisiones:</strong> Captura el metano (un potente gas de efecto invernadero) que de otro modo se liberaría a la atmósfera.</li>
+                    <li class="list-group-item"><i class="ri-check-line text-success"></i> <strong>Produce Biofertilizante:</strong> El subproducto sólido (digestato) es un excelente abono orgánico que mejora la calidad del suelo.</li>
+                </ul>
+            </div>
+            <div class="col-lg-6" data-animate="animate__fadeInUp">
+                <h3 class="fw-bold mb-3"><i class="ri-error-warning-line text-danger"></i> Desafíos a Considerar</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="ri-close-line text-danger"></i> <strong>Inversión Inicial:</strong> La construcción de un biodigestor de calidad requiere una inversión significativa.</li>
+                    <li class="list-group-item"><i class="ri-close-line text-danger"></i> <strong>Control del Proceso:</strong> Requiere monitorear condiciones como la temperatura y el pH para mantener la eficiencia.</li>
+                    <li class="list-group-item"><i class="ri-close-line text-danger"></i> <strong>Purificación Necesaria:</strong> Para usos avanzados como combustible vehicular (biometano), el biogás debe ser purificado.</li>
+                    <li class="list-group-item"><i class="ri-close-line text-danger"></i> <strong>Logística de Residuos:</strong> Se necesita un suministro constante y cercano de materia orgánica para ser viable.</li>
+                </ul>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- 5. Innovaciones en Biogás -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-lightbulb-flash-line text-info"></i> Innovaciones en Biogás</h2>
-        <p>
-          Las innovaciones incluyen la purificación avanzada de biogás, la inyección de biometano en redes de gas natural, la codigestión de residuos y la integración con energías solares y eólicas para sistemas híbridos.
-        </p>
-      </section>
-
-      <!-- 6. Desafíos del Biogás -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-error-warning-line text-danger"></i> Desafíos del Biogás</h2>
-        <p>
-          Los principales retos son la variabilidad de los residuos, la eficiencia de los digestores, la aceptación social y la viabilidad económica en pequeña escala. La investigación y la regulación son claves para superar estos desafíos.
-        </p>
-        <div class="table-responsive mt-3">
-          <table class="table table-bordered table-hover align-middle">
-            <caption class="text-center">Principales Desafíos y Soluciones</caption>
-            <thead class="table-danger">
-              <tr>
-                <th>Desafío</th>
-                <th>Solución Propuesta</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Variabilidad de residuos</td><td>Codigestión, pretratamientos</td></tr>
-              <tr><td>Eficiencia de digestores</td><td>Optimización de procesos, control automatizado</td></tr>
-              <tr><td>Viabilidad económica</td><td>Incentivos, escalabilidad, integración sectorial</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- 7. Proyecciones Futuras -->
-      <section class="container py-5 animate__animated">
-        <h2 class="fw-bold mb-3"><i class="ri-line-chart-line text-secondary"></i> Proyecciones Futuras</h2>
-        <p>
-          Se espera que el biogás y el biometano jueguen un papel clave en la descarbonización del transporte, la gestión de residuos y la producción de energía renovable. Para 2050, podrían cubrir hasta el 5% de la demanda energética mundial, con un enfoque en sostenibilidad y economía circular.
-        </p>
-        <div class="placeholder-grafico p-3 mt-3">
-          <canvas id="grafica-2"></canvas>
-        </div>
-      </section>
     </main>
 
+    <!-- ======================================= -->
+    <!-- ============== FOOTER ================= -->
+    <!-- ======================================= -->
     <footer class="custom-footer-bg text-white pt-5 pb-4">
         <div class="container text-center text-md-start">
             <div class="row mt-3">
-                <!-- Columna de la empresa -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">
-                        <i class="ri-leaf-line"></i> Energy Renewable
-                    </h5>
-                    <p>
-                        Comprometidos con un futuro más verde, ofrecemos información y herramientas sobre energías renovables para un planeta sostenible.
-                    </p>
-                </div>
-                <!-- Columna de Energías -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li>
-                        <li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li>
-                    </ul>
-                </div>
-                <!-- Columna de Soporte -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li>
-                        <li><a href="/SubPages/Suport/help-center.html" class="footer-link">Centro de Ayuda</a></li>
-                        <li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li>
-                        <li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li>
-                    </ul>
-                </div>
-                <!-- Columna de Redes Sociales -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5>
-                    <div class="social-icons">
-                        <a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-                        <a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-                        <a href="#" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-                    </div>
-                </div>
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
             </div>
             <hr class="mb-4">
-            <div class="row align-items-center">
-                <div class="col-12 text-center">
-                    <p class="mb-0">© 2025 Todos los derechos reservados por 
-                        <a href="/index.html" class="footer-brand-link">
-                        <strong>Energy Renewable</strong>
-                        </a>
-                    </p>
-                </div>
-            </div>
+            <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
         </div>
     </footer>
 </body>

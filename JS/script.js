@@ -1,5 +1,112 @@
 /*
 ==================================================================
+== LÓGICA PARA LA CALCULADORA DE POTENCIAL RENOVABLE
+==================================================================
+*   Este archivo debe contener toda la lógica para que la calculadora funcione.
+*   El HTML y CSS ya están listos.
+*
+*   TAREAS PARA EL DESARROLLADOR:
+*   1.  Capturar el evento 'submit' del formulario.
+*   2.  Leer los valores del input de consumo y del radio button de tipo de energía.
+*   3.  Aplicar la fórmula correspondiente según la energía seleccionada.
+*   4.  Mostrar los resultados en el contenedor 'results'.
+*   5.  Realizar validaciones (ej. que el consumo sea un número positivo).
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. OBTENER REFERENCIAS A LOS ELEMENTOS DEL DOM
+    // ------------------------------------------------
+    // const form = document.getElementById('calculatorForm');
+    // const consumoInput = document.getElementById('consumo');
+    // const resultsDiv = document.getElementById('results');
+    // const resultadoInstalacionEl = document.getElementById('resultadoInstalacion');
+    // const unidadInstalacionEl = document.getElementById('unidadInstalacion');
+    // const resultadoCO2El = document.getElementById('resultadoCO2');
+
+
+    // 2. DEFINIR CONSTANTES Y FACTORES DE CÁLCULO
+    // ------------------------------------------------
+    // Estos valores son promedios y pueden ajustarse para mayor precisión.
+
+    // Horas Solares Pico (HSP) promedio al día. Varía mucho por región. (Ej: 4.5 para una zona templada)
+    // const HORAS_SOLARES_PICO = 4.5;
+
+    // Eficiencia de un panel solar estándar (ej. 20% o 0.20) y potencia (ej. 450W o 0.45kW)
+    // const EFICIENCIA_PANEL = 0.20;
+    // const POTENCIA_PANEL_KW = 0.45;
+
+    // Factor de Capacidad de un aerogenerador doméstico (ej. 25% o 0.25)
+    // const FACTOR_CAPACIDAD_EOLICA = 0.25;
+
+    // Factor de Emisión de CO2 de la red eléctrica promedio (kg de CO2 por kWh).
+    // Este valor varía enormemente por país. (Ej: 0.233 kg CO2/kWh para España)
+    // const FACTOR_EMISION_CO2 = 0.233;
+
+
+    // 3. LÓGICA PRINCIPAL AL ENVIAR EL FORMULARIO
+    // ------------------------------------------------
+    // form.addEventListener('submit', (e) => {
+        // e.preventDefault(); // Prevenir que la página se recargue
+
+        // LEER VALORES
+        // const consumoMensual = parseFloat(consumoInput.value);
+        // const energiaSeleccionada = document.querySelector('input[name="tipoEnergia"]:checked');
+
+        // VALIDAR INPUTS
+        // if (isNaN(consumoMensual) || consumoMensual <= 0 || !energiaSeleccionada) {
+            // alert("Por favor, introduce un consumo válido y selecciona un tipo de energía.");
+            // return;
+        // }
+
+        // CÁLCULOS
+        // let instalacionRequerida = 0;
+        // let unidad = '';
+
+        // switch (energiaSeleccionada.value) {
+            // case 'solar':
+                // FORMULA: (Consumo Mensual / 30 días) / Horas Solares Pico = Potencia Pico (kWp) necesaria
+                // instalacionRequerida = (consumoMensual / 30) / HORAS_SOLARES_PICO;
+                // unidad = 'kWp en Paneles Solares';
+                // break;
+            
+            // case 'eolica':
+                // FORMULA: (Consumo Mensual / (30 días * 24 horas)) / Factor de Capacidad = Potencia Nominal (kW) del aerogenerador
+                // instalacionRequerida = (consumoMensual / (30 * 24)) / FACTOR_CAPACIDAD_EOLICA;
+                // unidad = 'kW de Potencia Eólica';
+                // break;
+
+            // ... AÑADIR CASOS PARA OTRAS ENERGÍAS (hidro, biomasa, etc.)
+            // Estas pueden ser más complejas. Para empezar, se puede mostrar un mensaje como:
+            // "El cálculo para [Biomasa] es complejo y requiere un estudio personalizado."
+            // O usar factores de producción muy simplificados.
+            
+            // default:
+                // instalacionRequerida = 0;
+                // unidad = 'Cálculo no disponible';
+                // break;
+        // }
+
+        // CÁLCULO DE REDUCCIÓN DE CO2
+        // const consumoAnual = consumoMensual * 12;
+        // const co2Ahorrado = consumoAnual * FACTOR_EMISION_CO2;
+
+
+        // 4. MOSTRAR RESULTADOS
+        // ------------------------------------------------
+        // resultadoInstalacionEl.textContent = instalacionRequerida.toFixed(2);
+        // unidadInstalacionEl.textContent = unidad;
+        // resultadoCO2El.textContent = co2Ahorrado.toFixed(0);
+        
+        // Hacer visible el div de resultados
+        // resultsDiv.style.display = 'block';
+        // Desplazar la vista hasta los resultados
+        // resultsDiv.scrollIntoView({ behavior: 'smooth' });
+    // });
+});
+
+/*
+==================================================================
 == SCRIPT PARA INTERACCIONES GLOBALES Y ANIMACIONES DEL SITIO
 ==================================================================
 */

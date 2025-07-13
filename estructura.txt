@@ -1,10 +1,4 @@
 EnergyRenewable/
-├── assets/
-│   ├── fonts/
-│   └── lib/
-│       ├── bootstrap.min.css
-│       ├── bootstrap.min.js
-│       └── popper.min.js
 ├── CSS/
 │   ├── animations.css
 │   ├── fonts.css
