@@ -1,66 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ============== META CARACTERES ESENCIALES ============== -->
+    <!-- ============== METAETIQUETAS ============== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Energy Renewable</title>
-
-    <!-- ============== META CARACTERES PARA SEO ============== -->
+    <title>Energy Renewable - El Futuro de la Energía Sostenible</title>
     <meta name="description" content="Explora el mundo de las energías renovables. Aprende sobre energía solar, eólica, biomasa y más, y únete al cambio hacia un futuro sostenible.">
     <meta name="keywords" content="energías renovables, energía solar, energía eólica, biomasa, biogás, geotérmica, hidroeléctrica, sostenibilidad, ecología, calculadora de energía">
     <meta name="author" content="Energy Renewable">
     <meta name="robots" content="index, follow">
-
+    <meta name="theme-color" content="#2C5F2D">
     <meta property="og:title" content="Energy Renewable - El Futuro de la Energía Sostenible">
     <meta property="og:description" content="Descubre, aprende y actúa por un mundo más sostenible. Explora las fuentes de energía limpia y únete al cambio.">
-    <meta property="og:image" content=""> <!-- TODO: Falta -->
-    <meta property="og:url" content=""> <!-- TODO: Falta -->
+    <!-- TODO: Crear una imagen de 1200x630px para la vista previa en redes y poner la URL completa aquí. -->
+    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-main.jpg">
+    <!-- TODO: Cuando el sitio esté online, poner la URL principal aquí. -->
+    <meta property="og:url" content="https://www.tudominio.com/index.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
 
-    <link rel="icon" href="/favicon.ico" sizes="any"> <!-- TODO: Falta -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <!-- TODO: Falta -->
+    <!-- TODO: Crear los archivos de favicon y ponerlos en la raíz del proyecto. -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- ============== ESTILOS Y LIBRERÍAS ============== -->
-    
-    <!-- Librerías de Terceros vía CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <!-- Hojas de Estilo Locales y Personalizadas -->
     <link rel="stylesheet" href="CSS/fonts.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/animations.css">
-
-    <!-- =========== SCRIPTS DE JS ============= -->
+    
+    <!-- ============== SCRIPTS DE JS ============== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="JS/script.js" defer></script>
     <script src="JS/graficas.js" defer></script>
-    
 </head>
 <body>
-  <!-- ======================================= -->
-  <!-- ============== HEADER ================= -->
-  <!-- ======================================= -->
   <header id="header">
-    <!-- Barra de navegación superior -->
     <nav id="nav-one">
       <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
       <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
     </nav>
-    <!-- Barra de navegación principal -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
       <div class="container-fluid">
-        <!-- Título y Logo del Sitio -->
-        <a class="navbar-brand nav-title" href="/index.html">
-          <i class="ri-leaf-line"></i> Energy Renewable
-        </a>
-        
-        <!-- Formulario de Búsqueda (Funcionalidad pendiente por otro equipo) -->
+        <a class="navbar-brand nav-title" href="/index.html"><i class="ri-leaf-line"></i> Energy Renewable</a>
         <form class="d-flex position-relative me-auto search-form-order">
           <div class="input-group">
             <input class="form-control" type="search" placeholder="Buscar energía..." aria-label="Search" id="buscar-input" autocomplete="off">
@@ -68,17 +54,11 @@
           </div>
           <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"></ul>
         </form>
-        
-        <!-- Botón Toggler para Menú Móvil -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <!-- Menú de Navegación -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle nav-two-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tipos de Energía</a>
+              <a class="nav-link dropdown-toggle nav-two-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Tipos de Energía</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Solar</a></li>
                 <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Eólica</a></li>
@@ -88,23 +68,15 @@
                 <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">Evolución</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a>
-            </li>
+            <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a></li>
+            <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- ======================================= -->
-  <!-- ============== MAIN CONTENT =========== -->
-  <!-- ======================================= -->
   <main class="contenido">
-    <!-- SECCIÓN HERO -->
     <section class="hero-section d-flex align-items-center justify-content-center flex-column text-center py-5">
       <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">Energías Renovables: El Futuro es Hoy</h1>
       <p class="lead mb-4 animate__animated animate__fadeInUp">Descubre, aprende y actúa por un mundo más sostenible. Explora las fuentes de energía limpia y únete al cambio.</p>
@@ -117,268 +89,42 @@
       </div>
     </section>
 
-    <!-- ============================================== -->
-    <!-- ============== SECCIÓN BENEFICIOS ============== -->
-    <!-- ============================================== -->
     <section id="beneficios" class="container py-5">
-      <!-- Título de la sección -->
       <div class="text-center" data-animate="animate__fadeInUp">
         <h2 class="display-5 fw-bold">El Futuro es Renovable</h2>
         <p class="lead text-muted mb-5">Adoptar energías limpias no es solo una elección ecológica, es una decisión inteligente que impulsa el progreso en todos los frentes.</p>
       </div>
-
-      <!-- Parte 1: Tarjetas de Impacto Clave -->
       <div class="row g-4 mb-5">
-        <!-- Tarjeta 1: Sostenibilidad Ambiental -->
-        <div class="col-lg-3 col-md-6" data-animate="animate__fadeInUp">
-          <div class="card h-100 shadow benefit-card text-center">
-            <div class="card-body">
-              <i class="ri-earth-line fs-1 text-success mb-3"></i>
-              <h5 class="card-title fw-bold">Sostenibilidad Ambiental</h5>
-              <p class="card-text">Combaten directamente el cambio climático al reducir a cero las emisiones de CO2, protegiendo la biodiversidad y asegurando un planeta sano.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Tarjeta 2: Crecimiento Económico -->
-        <div class="col-lg-3 col-md-6" data-animate="animate__fadeInUp" style="animation-delay: 0.1s;">
-          <div class="card h-100 shadow benefit-card text-center">
-            <div class="card-body">
-              <i class="ri-bar-chart-grouped-line fs-1 text-primary mb-3"></i>
-              <h5 class="card-title fw-bold">Crecimiento Económico</h5>
-              <p class="card-text">Crean empleos de alta calidad en sectores como la fabricación, instalación y mantenimiento, atrayendo inversión y fomentando la economía local.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Tarjeta 3: Seguridad Energética -->
-        <div class="col-lg-3 col-md-6" data-animate="animate__fadeInUp" style="animation-delay: 0.2s;">
-          <div class="card h-100 shadow benefit-card text-center">
-            <div class="card-body">
-              <i class="ri-shield-keyhole-line fs-1 text-danger mb-3"></i>
-              <h5 class="card-title fw-bold">Seguridad Energética</h5>
-              <p class="card-text">Reducen la dependencia de combustibles fósiles importados, cuyos precios son volátiles, garantizando un suministro energético estable y soberano.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Tarjeta 4: Innovación Tecnológica -->
-        <div class="col-lg-3 col-md-6" data-animate="animate__fadeInUp" style="animation-delay: 0.3s;">
-            <div class="card h-100 shadow benefit-card text-center">
-              <div class="card-body">
-                <i class="ri-lightbulb-flash-line fs-1 text-warning mb-3"></i>
-                <h5 class="card-title fw-bold">Innovación Tecnológica</h5>
-                <p class="card-text">Impulsan la investigación y el desarrollo en áreas de vanguardia como el almacenamiento de energía, las redes inteligentes y la eficiencia.</p>
-              </div>
-            </div>
-          </div>
+        <div class="col-lg-3 col-md-6" data-animate="animate__fadeInUp"><div class="card h-100 shadow benefit-card text-center"><div class="card-body"><i class="ri-earth-line fs-1 text-success mb-3"></i><h5 class="card-title fw-bold">Sostenibilidad Ambiental</h5><p class="card-text">Combaten directamente el cambio climático al reducir a cero las emisiones de CO2, protegiendo la biodiversidad y asegurando un planeta sano.</p></div></div></div>
+        <div class="col-lg-3 col-md-6" data-animate="animate__fadeInUp" style="animation-delay: 0.1s;"><div class="card h-100 shadow benefit-card text-center"><div class="card-body"><i class="ri-bar-chart-grouped-line fs-1 text-primary mb-3"></i><h5 class="card-title fw-bold">Crecimiento Económico</h5><p class="card-text">Crean empleos de alta calidad en sectores como la fabricación, instalación y mantenimiento, atrayendo inversión y fomentando la economía local.</p></div></div></div>
+        <div class="col-lg-3 col-md-6" data-animate="animate__fadeInUp" style="animation-delay: 0.2s;"><div class="card h-100 shadow benefit-card text-center"><div class="card-body"><i class="ri-shield-keyhole-line fs-1 text-danger mb-3"></i><h5 class="card-title fw-bold">Seguridad Energética</h5><p class="card-text">Reducen la dependencia de combustibles fósiles importados, cuyos precios son volátiles, garantizando un suministro energético estable y soberano.</p></div></div></div>
+        <div class="col-lg-3 col-md-6" data-animate="animate__fadeInUp" style="animation-delay: 0.3s;"><div class="card h-100 shadow benefit-card text-center"><div class="card-body"><i class="ri-lightbulb-flash-line fs-1 text-warning mb-3"></i><h5 class="card-title fw-bold">Innovación Tecnológica</h5><p class="card-text">Impulsan la investigación y el desarrollo en áreas de vanguardia como el almacenamiento de energía, las redes inteligentes y la eficiencia.</p></div></div></div>
       </div>
-
-      <!-- Separador visual -->
       <hr class="my-5">
-
-      <!-- ============================================== -->
-      <!-- ======== PARTE 2: ANÁLISIS DETALLADO ========= -->
-      <!-- ============================================== -->
       <div class="row align-items-center g-5">
-        <!-- Columna del Gráfico -->
-        <div class="col-lg-6" data-animate="animate__fadeInLeft">
-          <div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-lg text-center">
-              <h5 class="text-muted mb-3">Costo de Generación Eléctrica (LCOE)<br>Costo (USD/MWh)</h5>
-              <canvas id="costoComparativoEnergia"></canvas>
-          </div>
-        </div>
-
-        <!-- Columna del Acordeón de Ventajas -->
-        <div class="col-lg-6" data-animate="animate__fadeInRight">
-          <h3 class="fw-bold mb-4">Ventajas que Transforman Nuestro Mundo</h3>
-          
-          <!-- Acordeón de Beneficios -->
-          <div class="accordion accordion-flush" id="benefitsAccordion">
-            <!-- Beneficio 1: Salud -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <i class="ri-heart-pulse-line accordion-icon"></i>
-                  Aire Limpio y Salud Pública
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#benefitsAccordion">
-                <div class="accordion-body">
-                  Al eliminar la quema de combustibles fósiles, se reduce drásticamente la contaminación del aire. Esto disminuye la incidencia de enfermedades respiratorias y cardiovasculares, mejorando la calidad de vida y reduciendo los costos sanitarios.
-                </div>
-              </div>
-            </div>
-
-            <!-- Beneficio 2: Economía -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <i class="ri-line-chart-line accordion-icon"></i>
-                  Estabilidad Económica a Largo Plazo
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#benefitsAccordion">
-                <div class="accordion-body">
-                  Una vez construida una planta renovable, el "combustible" (sol, viento) es gratuito. Esto protege a los consumidores y a las industrias de la volatilidad y los picos de precios impredecibles del petróleo y el gas.
-                </div>
-              </div>
-            </div>
-
-            <!-- Beneficio 3: Acceso Universal -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <i class="ri-global-line accordion-icon"></i>
-                  Acceso Universal a la Energía
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#benefitsAccordion">
-                <div class="accordion-body">
-                  Las soluciones descentralizadas, como los mini-paneles solares o las micro-turbinas, permiten llevar electricidad a comunidades rurales y aisladas que no están conectadas a la red eléctrica principal, fomentando el desarrollo y la equidad.
-                </div>
-              </div>
-            </div>
-
-            <!-- Beneficio 4: Conservación de Agua -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <i class="ri-water-flash-line accordion-icon"></i>
-                  Conservación de un Recurso Vital: Agua
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#benefitsAccordion">
-                <div class="accordion-body">
-                  A diferencia de las plantas térmicas y nucleares, la energía solar fotovoltaica y la eólica requieren cantidades mínimas o nulas de agua para su operación, ayudando a conservar este recurso, que es cada vez más escaso a nivel mundial.
-                </div>
-              </div>
-            </div>
-
-            <!-- Beneficio 5: Resiliencia -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  <i class="ri-flashlight-line accordion-icon"></i>
-                  Resiliencia y Fiabilidad de la Red
-                </button>
-              </h2>
-              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#benefitsAccordion">
-                <div class="accordion-body">
-                  Una red energética diversificada con múltiples fuentes renovables descentralizadas es mucho más robusta y menos vulnerable a fallos a gran escala, como apagones masivos causados por la falla de una única gran central eléctrica.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="col-lg-6" data-animate="animate__fadeInLeft"><div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-lg text-center"><h5 class="text-muted mb-3">Costo de Generación Eléctrica (LCOE)<br>Costo (USD/MWh)</h5><canvas id="costoComparativoEnergia"></canvas></div></div>
+        <div class="col-lg-6" data-animate="animate__fadeInRight"><h3 class="fw-bold mb-4">Ventajas que Transforman Nuestro Mundo</h3><div class="accordion accordion-flush" id="benefitsAccordion"><div class="accordion-item"><h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="ri-heart-pulse-line accordion-icon"></i> Aire Limpio y Salud Pública</button></h2><div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#benefitsAccordion"><div class="accordion-body">Al eliminar la quema de combustibles fósiles, se reduce drásticamente la contaminación del aire. Esto disminuye la incidencia de enfermedades respiratorias y cardiovasculares, mejorando la calidad de vida y reduciendo los costos sanitarios.</div></div></div><div class="accordion-item"><h2 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="ri-line-chart-line accordion-icon"></i> Estabilidad Económica a Largo Plazo</button></h2><div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#benefitsAccordion"><div class="accordion-body">Una vez construida una planta renovable, el "combustible" (sol, viento) es gratuito. Esto protege a los consumidores y a las industrias de la volatilidad y los picos de precios impredecibles del petróleo y el gas.</div></div></div><div class="accordion-item"><h2 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="ri-global-line accordion-icon"></i> Acceso Universal a la Energía</button></h2><div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#benefitsAccordion"><div class="accordion-body">Las soluciones descentralizadas, como los mini-paneles solares o las micro-turbinas, permiten llevar electricidad a comunidades rurales y aisladas que no están conectadas a la red eléctrica principal, fomentando el desarrollo y la equidad.</div></div></div><div class="accordion-item"><h2 class="accordion-header" id="headingFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="ri-water-flash-line accordion-icon"></i> Conservación de un Recurso Vital: Agua</button></h2><div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#benefitsAccordion"><div class="accordion-body">A diferencia de las plantas térmicas y nucleares, la energía solar fotovoltaica y la eólica requieren cantidades mínimas o nulas de agua para su operación, ayudando a conservar este recurso, que es cada vez más escaso a nivel mundial.</div></div></div><div class="accordion-item"><h2 class="accordion-header" id="headingFive"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><i class="ri-flashlight-line accordion-icon"></i> Resiliencia y Fiabilidad de la Red</button></h2><div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#benefitsAccordion"><div class="accordion-body">Una red energética diversificada con múltiples fuentes renovables descentralizadas es mucho más robusta y menos vulnerable a fallos a gran escala, como apagones masivos causados por la falla de una única gran central eléctrica.</div></div></div></div></div>
       </div>
     </section>
 
-    <!-- SECCIÓN GRÁFICOS (PLACEHOLDER) -->
     <section class="container py-5 bg-light rounded-3">
       <h2 class="text-center mb-5 fw-bold" data-animate="animate__fadeInUp"><i class="ri-bar-chart-2-line"></i> Las Renovables en Cifras</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-10" data-animate="animate__fadeInUp">
-
-          <div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-sm text-center">
-            <h5 class="text-muted mb-3">Crecimiento de la Capacidad Renovable Mundial (GW)</h5>
-            <canvas id="crecimientoRenovableMundial"></canvas>
-          </div>
-        </div>
-      </div>
+      <div class="row justify-content-center"><div class="col-lg-10" data-animate="animate__fadeInUp"><div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-sm text-center"><h5 class="text-muted mb-3">Crecimiento de la Capacidad Renovable Mundial (GW)</h5><canvas id="crecimientoRenovableMundial"></canvas></div></div></div>
     </section>
 
-    <!-- SECCIÓN FAQ -->
-    <section class="container py-5">
-      <h2 class="text-center mb-5 fw-bold" data-animate="animate__fadeInUp"><i class="ri-question-answer-line"></i> Preguntas Frecuentes</h2>
-      <div class="accordion" id="faqAccordion" data-animate="animate__fadeInUp">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="faq1">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-              ¿Qué es exactamente una energía renovable?
-            </button>
-          </h2>
-          <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Las energías renovables son la clave para un futuro sostenible. A diferencia de los combustibles fósiles, estas se obtienen de fuentes inagotables de la naturaleza, como el sol, el viento o el agua. Su principal ventaja es que no producen emisiones contaminantes a gran escala, lo que ayuda a combatir el cambio climático. Tenemos la energía solar, que transforma la luz en electricidad; la eólica, que aprovecha la fuerza del viento; y la hidráulica, que utiliza el movimiento del agua. Adoptar estas energías no solo protege nuestro planeta, sino que también nos brinda independencia energética y fomenta la innovación tecnológica. Son, sin duda, la base para un mundo más limpio y eficiente.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="faq2">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-              ¿Son más caras que las energías tradicionales?
-            </button>
-          </h2>
-          <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              La respuesta a esta pregunta ha cambiado drásticamente en los últimos años. Históricamente, las energías renovables, como la solar y la eólica, tenían un costo inicial de inversión más elevado en comparación con las centrales eléctricas de carbón o gas. Sin embargo, gracias a los avances tecnológicos, la producción en masa y las políticas de apoyo, los precios de las renovables han caído drásticamente. De hecho, en la actualidad, la energía solar y la eólica son a menudo más baratas que construir y operar nuevas plantas de energía basadas en combustibles fósiles en muchas partes del mundo. Se espera que esta tendencia de reducción de costos continúe en 2025, con proyecciones que indican caídas de entre el 2% y el 11% para las tecnologías de energía limpia. Si bien la inversión inicial puede ser un factor a considerar, los costos operativos de las renovables son significativamente más bajos, ya que no dependen de la compra constante de combustibles. Esto, sumado a la volatilidad de los precios del petróleo y el gas, hace que las energías renovables sean una opción económicamente competitiva y más estable a largo plazo, además de sus evidentes beneficios ambientales.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="faq3">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-              ¿Cómo puedo contribuir a la transición energética?
-            </button>
-          </h2>
-          <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              La transición energética es un esfuerzo colectivo, pero cada acción individual suma. Aquí te explico cómo puedes contribuir: Primero, y más importante, reduce tu consumo de energía. Apaga las luces y electrodomésticos que no estés usando, desconecta cargadores, optimiza el uso de la calefacción o el aire acondicionado y cambia a bombillas LED. Pequeños cambios en tus hábitos diarios pueden generar un ahorro significativo. Segundo, opta por la eficiencia energética en tu hogar. Si es posible, mejora el aislamiento de tu vivienda, utiliza electrodomésticos con alta calificación energética y considera instalar sistemas de energía solar en tu techo si las condiciones lo permiten. Tercero, en cuanto a tu movilidad, considera alternativas al coche particular que funciona con gasolina. Prioriza caminar, usar bicicleta o el transporte público. Si necesitas un vehículo, evalúa la posibilidad de adquirir uno eléctrico o híbrido. Finalmente, infórmate y participa. Conoce las políticas energéticas de tu ciudad o país y apoya iniciativas que promuevan las energías renovables. Difunde información sobre la importancia de la transición energética en tu círculo social. Cada decisión consciente nos acerca a un futuro más sostenible.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BOTÓN FLOTANTE PARA IR ARRIBA -->
-    <a href="#" id="btn-ir-arriba" class="btn btn-success rounded-circle shadow position-fixed" aria-label="Ir arriba">
-      <i class="ri-arrow-up-s-line"></i>
-    </a>
+    <a href="#" id="btn-ir-arriba" class="btn btn-success rounded-circle shadow position-fixed" aria-label="Ir arriba"><i class="ri-arrow-up-s-line"></i></a>
   </main>
 
-  <!-- ======================================= -->
-  <!-- ============== FOOTER ================= -->
-  <!-- ======================================= -->
   <footer class="custom-footer-bg text-white pt-5 pb-4">
     <div class="container text-center text-md-start">
       <div class="row mt-3">
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5>
-          <p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p>
-        </div>
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5>
-          <ul class="list-unstyled">
-            <li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li>
-            <li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li>
-            <li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li>
-            <li><a href="/SubPages/TiposDeEnergias/biogas.html" class="footer-link">Biogas</a></li>
-            <li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li>
-            <li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotermica</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5>
-          <ul class="list-unstyled">
-            <li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li>
-            <li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li>
-            <li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li>
-            <li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5>
-            <div class="social-icons">
-                <a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-                <a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
-                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-            </div>
-        </div>
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/biogas.html" class="footer-link">Biogás</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
       </div>
       <hr class="mb-4">
-      <div class="row align-items-center">
-        <div class="col-12 text-center">
-          <p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p>
-        </div>
-      </div>
+      <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
     </div>
   </footer>
 </body>

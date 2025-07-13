@@ -1,10 +1,12 @@
-/* ============== IMPORTACIÓN DE FUENTES DE GOOGLE ============== */
-
 /*
+==================================================================
+== IMPORTACIÓN DE FUENTES DE GOOGLE
+==================================================================
 * Se importa la fuente 'Poppins' desde Google Fonts.
 * Se incluyen varios pesos (weights) para dar flexibilidad en el diseño:
 * 400 (Regular), 500 (Medium), 700 (Bold).
 * El `display=swap` asegura que el texto sea visible con una fuente de respaldo
 * mientras se carga la fuente principal, mejorando la experiencia del usuario (LCP).
 */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');

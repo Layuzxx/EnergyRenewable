@@ -1,0 +1,150 @@
+==================================================================
+==         DOCUMENTACIÓN OFICIAL DEL PROYECTO
+==         ENERGY RENEWABLE
+==================================================================
+==
+== Versión: 1.0.0 Beta
+== Fecha de última actualización: 15 de Julio de 2025
+==
+==================================================================
+
+
+1. INTRODUCCIÓN
+------------------------------------------------------------------
+
+Este documento sirve como la guía central para el desarrollo, mantenimiento y futura expansión del sitio web "Energy Renewable".
+
+El objetivo del proyecto es crear un portal web educativo, moderno y responsivo que sirva como una fuente de información fiable y atractiva sobre las distintas formas de energía renovable. El sitio está diseñado para ser modular, permitiendo que diferentes miembros del equipo trabajen en áreas específicas (funcionalidad, gráficos, contenido) de forma independiente.
+
+Tecnologías Principales:
+* HTML5
+* CSS3 (con variables para una fácil personalización)
+* JavaScript (ES6+)
+* Bootstrap 5.3 (vía CDN)
+* Chart.js (vía CDN)
+* Remixicon y Animate.css (vía CDN)
+
+
+2. ESTRUCTURA DE DIRECTORIOS
+------------------------------------------------------------------
+
+La estructura del proyecto está diseñada para ser lógica y escalable.
+
+EnergyRenewable/
+├── CSS/                  -> Contiene todas las hojas de estilo personalizadas.
+│   ├── animations.css
+│   ├── fonts.css
+│   └── style.css
+├── JS/                   -> Contiene todos los archivos de JavaScript del proyecto.
+│   ├── calculadora.js
+│   ├── graficas.js
+│   └── script.js
+├── SubPages/             -> Contiene todas las páginas secundarias del sitio.
+│   ├── Suport/
+│   └── TiposDeEnergias/
+├── index.html            -> Página de inicio y punto de entrada principal.
+├── README.md             -> Carta de presentación del proyecto para GitHub.
+└── documentacion.txt     -> Este archivo.
+
+
+3. DESCRIPCIÓN DETALLADA DE ARCHIVOS Y CARPETAS
+------------------------------------------------------------------
+
+### 3.1. Directorio Raíz (/)
+
+*   **index.html**:
+    *   **Propósito:** Es la página principal del sitio. Presenta una visión general de todas las energías, los beneficios y los datos clave.
+    *   **Estructura:** Contiene un "Hero Section", tarjetas de beneficios, un acordeón de ventajas, y placeholders para gráficos de resumen.
+
+*   **README.md**:
+    *   **Propósito:** Documentación orientada a la comunidad de GitHub. Proporciona una visión general rápida del proyecto, su stack tecnológico y cómo contribuir. Es la cara pública del repositorio.
+
+*   **documentacion.txt**:
+    *   **Propósito:** La documentación interna y detallada del proyecto que estás leyendo ahora mismo.
+
+
+### 3.2. Carpeta CSS/
+
+*   **style.css**:
+    *   **Propósito:** Es el corazón del diseño. Contiene los estilos principales y más importantes.
+    *   **Contenido:** Define las variables de color (`:root`), estilos generales del `body`, `header`, `footer`, y los estilos para componentes reutilizables como tarjetas, acordeones y placeholders de gráficos.
+
+*   **animations.css**:
+    *   **Propósito:** Centraliza todo el código relacionado con la interactividad visual para mantener el `style.css` más limpio.
+    *   **Contenido:** Define las transiciones, efectos `hover` y las animaciones de los componentes.
+
+*   **fonts.css**:
+    *   **Propósito:** Su única función es importar las fuentes web externas (Google Fonts).
+    *   **Contenido:** Contiene la declaración `@import` para la fuente "Poppins".
+
+
+### 3.3. Carpeta JS/
+
+*   **script.js**:
+    *   **Propósito:** El cerebro de las interacciones globales del sitio.
+    *   **Contenido:**
+        *   **Lógica del Buscador (PENDIENTE):** Contiene comentarios que guían al desarrollador sobre cómo implementar la funcionalidad de búsqueda predictiva.
+        *   **Animaciones y Efectos de Scroll (FUNCIONAL):** Incluye el código del `IntersectionObserver` que anima los elementos cuando entran en la pantalla.
+        *   **Botón "Ir Arriba" (FUNCIONAL):** Contiene la lógica para mostrar, ocultar y hacer funcionar el botón flotante.
+
+*   **calculadora.js**:
+    *   **Propósito:** Archivo dedicado exclusivamente a la funcionalidad de la calculadora.
+    *   **Contenido (PENDIENTE):** Contiene comentarios detallados que explican paso a paso la lógica a implementar: desde la captura de datos del formulario hasta la ejecución de las fórmulas y la visualización de los resultados y del cuadro de información dinámico.
+
+*   **graficas.js**:
+    *   **Propósito:** Controlador central para todos los gráficos del sitio, utilizando la librería Chart.js.
+    *   **Contenido (PARCIALMENTE FUNCIONAL):**
+        *   Contiene el código funcional para los dos gráficos de la página de inicio.
+        *   Incluye la estructura y placeholders comentados para **todos** los demás gráficos del sitio, listos para ser implementados por el desarrollador encargado.
+        *   Utiliza una comprobación `if (canvas)` para cada gráfico, lo que permite que el script se ejecute sin errores en cualquier página, aunque no contenga todos los gráficos.
+
+
+### 3.4. Carpeta SubPages/
+
+*   **TiposDeEnergias/**:
+    *   **Propósito:** Alberga una página HTML dedicada para cada uno de los 6 tipos de energía.
+    *   **Contenido:** Los archivos `solar.html`, `eolica.html`, `hidroelectrica.html`, `biomasa.html`, `biogas.html`, y `geotermica.html`. Todos siguen una estructura de plantilla coherente para mantener la consistencia visual y de contenido.
+
+*   **Suport/**:
+    *   **Propósito:** Contiene las páginas de soporte y legales del sitio.
+    *   **Contenido:** `about.html`, `help-centre.html`, `terms.html`, y `privacy.html`.
+
+*   **calculadora.html**:
+    *   **Propósito:** La interfaz de usuario para la herramienta interactiva de cálculo de potencial energético. Su lógica está descrita en `JS/calculadora.js`.
+
+*   **vidaevo.html**:
+    *   **Propósito:** Una página de contenido especial que muestra una línea de tiempo sobre la evolución histórica de las energías renovables.
+
+
+4. FLUJO DE TRABAJO Y COLABORACIÓN
+------------------------------------------------------------------
+
+Para mantener un desarrollo organizado, el trabajo se divide de la siguiente manera:
+
+*   **Desarrollador Front-End (Tu Rol):**
+    *   Responsable de la estructura HTML y los estilos CSS.
+    *   Define la apariencia y el layout de todas las páginas y componentes.
+    *   Prepara los archivos y placeholders para que los demás miembros del equipo puedan trabajar.
+
+*   **Desarrollador de Funcionalidad (Compañeros):**
+    *   **Buscador:** Debe implementar la lógica en `JS/script.js` siguiendo la guía comentada en la "SECCIÓN 1".
+    *   **Calculadora:** Debe implementar la lógica en `JS/calculadora.js` siguiendo la guía detallada en dicho archivo. No debe tocar `script.js` para esta tarea.
+
+*   **Desarrollador de Gráficos (Compañero):**
+    *   Su único foco es el archivo `JS/graficas.js`.
+    *   Debe tomar el código base de los gráficos del `index.html` y replicarlo para los demás `canvas` del sitio, utilizando los datos y colores correspondientes a cada página de energía.
+
+
+5. PAUTAS Y BUENAS PRÁCTICAS
+------------------------------------------------------------------
+
+1.  **Comentarios:** Todo nuevo bloque de código complejo debe estar bien comentado para explicar su propósito.
+2.  **Estilos CSS:** Utilizar siempre que sea posible las variables de color definidas en `:root` en `style.css` para mantener la consistencia.
+3.  **Consistencia:** Las nuevas páginas deben seguir la estructura de `header`, `main` y `footer` ya establecida. Los nuevos componentes deben diseñarse para ser reutilizables.
+4.  **Tareas Pendientes:** Los comentarios `<!-- TODO: -->` en los archivos HTML marcan tareas que requieren una acción específica (generalmente añadir un recurso gráfico o una URL final). Deben ser resueltos antes del despliegue final.
+
+
+6. CONCLUSIÓN
+------------------------------------------------------------------
+
+Esta documentación busca ser una referencia viva del proyecto. Se debe mantener actualizada a medida que el sitio evoluciona. Una buena documentación es clave para el éxito y la escalabilidad del proyecto.

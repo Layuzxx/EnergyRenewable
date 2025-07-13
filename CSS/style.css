@@ -1,27 +1,34 @@
+/*
+==================================================================
+== HOJA DE ESTILOS PRINCIPAL
+== Energy Renewable
+==================================================================
+*/
+
 /* ============== VARIABLES DE COLOR ============== */
 :root {
-    --primary-color: #2C5F2D;      /* Verde oscuro principal para elementos clave */
-    --secondary-color: #97BC62FF;  /* Verde claro como color de acento */
+    --primary-color: #2C5F2D;      /* Verde oscuro principal */
+    --secondary-color: #97BC62FF;  /* Verde claro como acento */
     --dark-bg-color: #222831;      /* Fondo oscuro para header y footer */
-    --text-color: #FFFFFF;         /* Texto principal sobre fondos oscuros (blanco) */
+    --text-color: #FFFFFF;         /* Texto principal sobre fondos oscuros */
     --text-color-light: #DDDDDD;   /* Texto más suave sobre fondos oscuros */
     --light-bg-color: #f8f9fa;     /* Fondo claro para menús y secciones */
-    --dark-text-color: #333333;    /* Texto oscuro para usar sobre fondos claros */
+    --dark-text-color: #333333;    /* Texto oscuro para fondos claros */
     --body-bg: #FFFFFF;            /* Fondo principal del cuerpo de la página */
 }
 
 /* ============== ESTILOS GENERALES ============== */
 body {
-    font-family: 'Poppins', sans-serif; /* Fuente principal importada de Google Fonts */
+    font-family: 'Poppins', sans-serif;
     background-color: var(--body-bg);
     color: var(--dark-text-color);
 }
 
 .contenido {
-    /* Fondo ligeramente gris para el contenido principal, diferenciándolo del body */
     background-color: #fdfdfd; 
-    min-height: 70vh; /* Asegura que el contenido ocupe un espacio mínimo */
-    padding: 2rem 0;
+    min-height: 70vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 /* ============== HEADER / NAVEGACIÓN ============== */
@@ -52,10 +59,11 @@ body {
     font-weight: 700;
     text-decoration: none;
 }
+
 .nav-title i {
     color: var(--secondary-color);
     margin-right: 8px;
-    vertical-align: -3px; /* Alinea el ícono con el texto */
+    vertical-align: -3px;
 }
 
 .nav-two-item {
@@ -78,75 +86,70 @@ body {
     font-weight: 500;
 }
 
-/* Estilos del buscador */
-.search-form-order .form-control {
-    border-right: 0;
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--text-color) !important;
+    background-color: var(--primary-color) !important;
 }
+
 .search-form-order .form-control:focus {
     box-shadow: none;
     border-color: var(--secondary-color);
 }
-.search-form-order .input-group-text {
-    background-color: white;
-    border-left: 0;
-}
 
-/* ============== CONTENIDO ESPECÍFICO ============== */
-
-/* HERO SECTION */
+/* ============== HERO SECTIONS ============== */
 .hero-section {
-    min-height: 70vh;
-    background: linear-gradient(120deg, #e9f5e9 0%, #f8f9fa 100%); /* Degradado sutil */
-    position: relative;
-    overflow: hidden;
+    min-height: 60vh;
+    background: linear-gradient(120deg, #e9f5e9 0%, #f8f9fa 100%);
     display: flex; 
     align-items: center;
 }
+
 .hero-section h1 {
     color: var(--primary-color);
     font-weight: 700;
-    letter-spacing: 1px;
-}
-.hero-section .hero-icons i {
-    transition: transform 0.3s ease;
-}
-.hero-section .hero-icons i:hover {
-    transform: scale(1.2) rotate(-5deg);
 }
 
-/* BENEFIT CARDS */
-.benefit-card {
+.page-hero {
+    color: white;
+    padding: 4rem 1rem;
+}
+
+.page-hero h1, .about-hero h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero {
+    background-color: var(--light-bg-color);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* ============== COMPONENTES Y TARJETAS ============== */
+.benefit-card,
+.card-hover,
+.team-card {
     border: none;
     border-radius: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.benefit-card:hover {
+
+.benefit-card:hover,
+.card-hover:hover,
+.team-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(44, 95, 45, 0.12);
 }
 
-/* PLACEHOLDER GRAFICO */
 .placeholder-grafico {
     border: 2px dashed var(--secondary-color);
     color: #888;
     background: #f8f9fa;
     border-radius: 0.5rem;
 }
-/* Asegura que el canvas dentro del placeholder ocupe el espacio */
+
 .placeholder-grafico canvas {
     max-height: 400px;
     width: 100% !important;
 }
 
-/* FAQ ACCORDION */
-.accordion-button:not(.collapsed) {
-    color: var(--primary-color);
-    background-color: #e9f5e9;
-    font-weight: 700;
-}
-.accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(151, 188, 98, 0.4);
-}
 .accordion-item {
     border-radius: 0.5rem !important;
     margin-bottom: 1rem;
@@ -154,148 +157,32 @@ body {
     overflow: hidden;
 }
 
-/* BOTÓN IR ARRIBA */
-#btn-ir-arriba {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    display: none; /* Controlado por JS */
-    opacity: 0;    /* Controlado por JS */
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 16px rgba(44,95,45,0.2);
-    transition: opacity 0.3s ease-in-out, background-color 0.2s, transform 0.2s;
-    z-index: 1050;
-}
-#btn-ir-arriba:hover {
-    background-color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-/* ============== FOOTER ============== */
-.custom-footer-bg {
-    background-color: var(--dark-bg-color) !important;
-}
-
-.footer-heading {
-    color: var(--secondary-color) !important;
-    font-weight: 700 !important;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.footer-heading i {
-    margin-right: 8px;
-}
-
-.footer-link {
-    color: var(--text-color-light);
-    text-decoration: none;
-    display: inline-block;
-    padding-bottom: 4px;
-}
-
-.custom-footer-bg hr {
-    border-color: rgba(255, 255, 255, 0.15);
-}
-
-.footer-brand-link {
-    text-decoration: none;
-    color: var(--secondary-color);
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: #e9f5e9;
     font-weight: 700;
 }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-.social-icon {
-    color: var(--text-color-light);
-    font-size: 1.8rem;
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(151, 188, 98, 0.4);
 }
 
-/* ============== MEDIA QUERIES PARA RESPONSIVIDAD ============== */
-@media (max-width: 991.98px) {
-    #nav-one {
-        display: none; /* Ocultar barra superior en tablets y móviles */
-    }
-    .custom-navbar-bg {
-        padding: 10px 20px;
-    }
-    .search-form-order {
-        order: 1; /* Mover buscador al final en móvil */
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .hero-section h1 {
-        font-size: 2rem;
-    }
-    .footer-heading {
-        text-align: center;
-    }
-    .footer-heading + ul {
-        text-align: center;
-    }
-}
-
-/* ===================================== */
-/* === ESTILOS PARA SECCIÓN BENEFICIOS === */
-/* ===================================== */
-
-/* Estilo para la lista detallada de beneficios */
 .benefits-list li {
-    display: flex; /* Para alinear el ícono con el texto */
+    display: flex;
     align-items: flex-start;
-    margin-bottom: 1rem; /* Espacio entre cada punto de la lista */
+    margin-bottom: 1rem;
     font-size: 1.05rem;
-    line-height: 1.6;
 }
 
 .benefits-list i {
-    font-size: 1.5rem; /* Tamaño del ícono de check */
-    color: var(--primary-color); /* Usa el color verde principal */
-    margin-right: 15px; /* Espacio entre el ícono y el texto */
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 15px;
     margin-top: 5px;
 }
 
-/* Estilo para las tarjetas en la sección de "Explora" */
-.card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    height: 100%;
-}
-
-.card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(44, 95, 45, 0.12);
-}
-
-/* Estilo para la sección de Llamada a la Acción (CTA) */
-.cta-section {
-    background: linear-gradient(45deg, rgba(44, 95, 45, 0.9), rgba(151, 188, 98, 0.9)), url('https://via.placeholder.com/1920x400/cccccc/FFFFFF?text=Fondo+Energético') center center;
-    background-size: cover;
-    color: white;
-    padding: 4rem 1rem;
-}
-
-/* ===================================== */
-/* === ESTILOS PARA ACORDEÓN DE BENEFICIOS === */
-/* ===================================== */
-
 .accordion-flush .accordion-item {
-    border-bottom: 1px solid #e0e0e0; /* Línea de separación sutil */
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .accordion-flush .accordion-button {
@@ -305,23 +192,19 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Elimina la sombra de foco por defecto y usa la tuya */
 .accordion-flush .accordion-button:focus {
     box-shadow: none;
     border-color: transparent;
 }
 
-/* Cambia el color de fondo al pasar el mouse */
 .accordion-flush .accordion-button:not(.collapsed):hover {
     background-color: #eef6ee;
 }
 
-/* Estilo para cuando el botón está colapsado (cerrado) */
 .accordion-flush .accordion-button.collapsed {
     background-color: transparent;
 }
 
-/* Estilo del ícono dentro del botón del acordeón */
 .accordion-icon {
     margin-right: 15px;
     font-size: 1.5rem;
@@ -329,12 +212,10 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Gira el ícono cuando el acordeón está abierto */
 .accordion-button:not(.collapsed) .accordion-icon {
     transform: rotate(10deg) scale(1.1);
 }
 
-/* Estilo del cuerpo del acordeón */
 .accordion-body {
     background-color: #f8f9fa;
     padding: 1.5rem;
@@ -342,24 +223,19 @@ body {
     line-height: 1.7;
 }
 
-/* ===================================== */
-/* === ESTILOS PARA PÁGINA 'SOBRE NOSOTROS' === */
-/* ===================================== */
-
-/* Hero section específico para la página 'About' */
-.about-hero {
-    background-color: var(--light-bg-color);
-    border-bottom: 1px solid #e0e0e0;
+.cta-section {
+    background: linear-gradient(45deg, rgba(44, 95, 45, 0.9), rgba(151, 188, 98, 0.9));
+    color: white;
+    padding: 4rem 1rem;
 }
 
-/* Icono grande en la sección de Misión */
-.mission-icon {
+/* ============== PÁGINAS ESPECÍFICAS ============== */
+.mission-icon,
+.feature-icon-big {
     font-size: 10rem;
-    color: var(--primary-color);
-    opacity: 0.1;
+    opacity: 0.15;
 }
 
-/* Contenedor del icono de perfil en la tarjeta del equipo */
 .team-icon-wrapper {
     width: 120px;
     height: 120px;
@@ -377,47 +253,14 @@ body {
     color: var(--dark-text-color);
 }
 
-/* Tarjeta de miembro del equipo */
-.team-card {
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(44, 95, 45, 0.12);
-}
-
-.team-card .badge {
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-}
-
-/* Redes sociales del equipo */
 .team-socials .social-icon {
     font-size: 1.5rem;
     color: var(--dark-text-color);
-    margin: 0 0.5rem;
-    transition: color 0.3s ease, transform 0.3s ease;
 }
-
-.team-socials .social-icon:hover {
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-/* ===================================== */
-/* === ESTILOS PARA PÁGINAS LEGALES (Términos/Privacidad) === */
-/* ===================================== */
 
 .card-terms {
     border: 1px solid #e0e0e0;
-    border-left: 5px solid var(--primary-color); /* Borde izquierdo de acento */
-    border-radius: 0.5rem;
-}
-
-.card-terms .card-body {
-    padding: 1.5rem;
+    border-left: 5px solid var(--primary-color);
 }
 
 .card-terms .card-title i {
@@ -425,75 +268,81 @@ body {
     vertical-align: -2px;
 }
 
-/* ===================================== */
-/* === ESTILOS PARA PÁGINA CALCULADORA === */
-/* ===================================== */
-
-/* Estilo para los radio buttons con apariencia de tarjeta */
-.card-radio .form-check-input {
-    display: none; /* Oculta el radio button original */
-}
-
-.card-radio .form-check-label {
-    display: flex;
-    flex-direction: column;
+/* ============== BOTÓN IR ARRIBA ============== */
+#btn-ir-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: none;
+    opacity: 0;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem 1rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    height: 100%;
+    box-shadow: 0 4px 16px rgba(44,95,45,0.2);
+    transition: opacity 0.3s ease-in-out, background-color 0.2s, transform 0.2s;
+    z-index: 1050;
 }
 
-.card-radio .form-check-label i {
-    font-size: 2.5rem;
-    color: var(--dark-text-color);
-    margin-bottom: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.card-radio .form-check-label span {
-    font-weight: 700;
-    color: var(--dark-text-color);
-}
-
-.card-radio .form-check-input:checked + .form-check-label {
+#btn-ir-arriba:hover {
     background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white;
+    transform: scale(1.1);
 }
 
-.card-radio .form-check-input:checked + .form-check-label i,
-.card-radio .form-check-input:checked + .form-check-label span {
-    color: white;
+/* ============== FOOTER ============== */
+.custom-footer-bg {
+    background-color: var(--dark-bg-color) !important;
 }
 
-.card-radio .form-check-input:not(:checked) + .form-check-label:hover {
-    background-color: #f8f9fa;
-    border-color: var(--secondary-color);
+.footer-heading {
+    color: var(--secondary-color) !important;
+    font-weight: 700 !important;
 }
 
-/* ===================================== */
-/* === ESTILOS PARA PÁGINAS DE ENERGÍAS === */
-/* ===================================== */
-
-.page-hero {
-    color: white;
-    padding: 4rem 1rem;
+.footer-link {
+    color: var(--text-color-light);
+    text-decoration: none;
 }
 
-.page-hero h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.footer-brand-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
 }
 
-/* ===================================== */
-/* === ESTILOS ADICIONALES PARA PÁGINAS DE ENERGÍAS === */
-/* ===================================== */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
 
-/* Icono grande para secciones de características */
-.feature-icon-big {
-    font-size: 10rem;
-    opacity: 0.15;
+.social-icon {
+    color: var(--text-color-light);
+    font-size: 1.8rem;
+}
+
+/* ============== MEDIA QUERIES PARA RESPONSIVIDAD ============== */
+@media (max-width: 991.98px) {
+    #nav-one {
+        display: none;
+    }
+    .custom-navbar-bg {
+        padding: 10px 20px;
+    }
+    .search-form-order {
+        order: 1;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .footer-heading,
+    .footer-heading + ul {
+        text-align: center;
+    }
 }

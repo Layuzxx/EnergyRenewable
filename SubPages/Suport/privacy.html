@@ -13,12 +13,16 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#2C5F2D">
 
+    <!-- TODO: Crear una imagen de 1200x630px para la vista previa de esta página y poner la URL completa aquí. -->
+    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-legal.jpg">
+    <!-- TODO: Cuando el sitio esté online, poner la URL de esta página aquí. -->
+    <meta property="og:url" content="https://www.tudominio.com/SubPages/Suport/privacy.html">
     <meta property="og:title" content="Política de Privacidad - Energy Renewable">
     <meta property="og:description" content="Tu privacidad es importante para nosotros. Conoce cómo gestionamos tus datos.">
-    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-legal.jpg">
-    <meta property="og:url" content="https://www.tudominio.com/SubPages/Suport/privacy.html">
     <meta property="og:type" content="article">
-
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- TODO: Crear los archivos de favicon y ponerlos en la raíz del proyecto. -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -36,153 +40,79 @@
     <script src="/JS/script.js" defer></script>
 </head>
 <body>
-    <!-- ======================================= -->
-    <!-- ============== HEADER ================= -->
-    <!-- ======================================= -->
-    <header id="header">
-        <nav id="nav-one">
-            <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
-            <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
-        </nav>
-        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
-            <div class="container-fluid">
-                <a class="navbar-brand nav-title" href="/index.html"><i class="ri-leaf-line"></i> Energy Renewable</a>
-                <form class="d-flex position-relative me-auto search-form-order">
-                    <div class="input-group">
-                        <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
-                        <span class="input-group-text"><i class="ri-search-line"></i></span>
-                    </div>
-                    <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"></ul>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-two-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Tipos de Energía</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Solar</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Eólica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Hidroeléctrica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Biomasa</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biogas.html">Biogás</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">Evolución</a></li>
-                        <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
-                    </ul>
+  <header id="header">
+    <nav id="nav-one">
+        <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
+        <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-title" href="/index.html"><i class="ri-leaf-line"></i> Energy Renewable</a>
+            <form class="d-flex position-relative me-auto search-form-order">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
+                    <span class="input-group-text"><i class="ri-search-line"></i></span>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <!-- ======================================= -->
-    <!-- ============== MAIN CONTENT =========== -->
-    <!-- ======================================= -->
-    <main class="contenido">
-        <!-- HERO SECTION -->
-        <section class="about-hero text-center py-5">
-        <div class="container">
-            <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Política de Privacidad</h1>
-            <p class="lead text-muted animate__animated animate__fadeInUp">Tu confianza es nuestra prioridad. Aquí te explicamos cómo cuidamos tus datos.</p>
-        </div>
-        </section>
-
-        <!-- CONTENIDO DE LA POLÍTICA -->
-        <section class="container py-5">
-        <div class="row g-4">
-            <!-- Tarjeta 1: Introducción -->
-            <div class="col-12" data-animate="animate__fadeInUp">
-            <div class="card card-terms">
-                <div class="card-body">
-                <h4 class="card-title fw-bold"><i class="ri-information-line text-success"></i> 1. Nuestro Compromiso con tu Privacidad</h4>
-                <p>En Energy Renewable, respetamos tu privacidad y nos comprometemos a proteger tus datos personales. Esta política describe qué información recopilamos y cómo la utilizamos para ofrecerte una experiencia segura y valiosa en nuestro sitio web.</p>
-                </div>
-            </div>
-            </div>
-
-            <!-- Tarjeta 2: Información Recopilada -->
-            <div class="col-12" data-animate="animate__fadeInUp">
-            <div class="card card-terms">
-                <div class="card-body">
-                <h4 class="card-title fw-bold"><i class="ri-database-2-line text-primary"></i> 2. Información que Recopilamos</h4>
-                <p>Recopilamos dos tipos de información:</p>
-                <ul>
-                    <li><strong>Información proporcionada voluntariamente:</strong> Esto incluye tu nombre y dirección de correo electrónico cuando utilizas nuestro formulario de contacto para hacernos una pregunta o enviarnos una sugerencia.</li>
-                    <li><strong>Información recopilada automáticamente:</strong> Utilizamos herramientas de análisis web estándar para recopilar datos anónimos sobre tu visita, como el tipo de navegador, las páginas que visitas y el tiempo de permanencia. Esta información no te identifica personalmente y se utiliza únicamente para mejorar el rendimiento y la utilidad de nuestro sitio.</li>
+                <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"></ul>
+            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-two-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Tipos de Energía</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Solar</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Eólica</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Hidroeléctrica</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Biomasa</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biogas.html">Biogás</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a></li>
+                    <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
                 </ul>
-                </div>
-            </div>
-            </div>
-
-            <!-- Tarjeta 3: Uso de la Información -->
-            <div class="col-12" data-animate="animate__fadeInUp">
-            <div class="card card-terms">
-                <div class="card-body">
-                <h4 class="card-title fw-bold"><i class="ri-shield-user-line text-warning"></i> 3. ¿Cómo Usamos tu Información?</h4>
-                <p>La información que nos proporcionas se utiliza exclusivamente para los siguientes fines:</p>
-                <ul>
-                    <li>Para responder a tus consultas y proporcionarte la información que solicitas.</li>
-                    <li>Para analizar el tráfico del sitio y mejorar nuestro contenido y la experiencia del usuario.</li>
-                    <li><strong>Nunca</strong> venderemos, alquilaremos o compartiremos tu información personal con terceros para fines de marketing.</li>
-                </ul>
-                </div>
-            </div>
-            </div>
-            
-            <!-- Tarjeta 4: Derechos del Usuario -->
-            <div class="col-12" data-animate="animate__fadeInUp">
-            <div class="card card-terms">
-                <div class="card-body">
-                <h4 class="card-title fw-bold"><i class="ri-user-settings-line text-info"></i> 4. Tus Derechos sobre tus Datos</h4>
-                <p>Conforme a la legislación vigente, tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus datos personales. Para ejercer cualquiera de estos derechos, puedes enviarnos un correo electrónico a <a href="mailto:privacidad@energyrenewable.com">privacidad@energyrenewable.com</a> y atenderemos tu solicitud a la brevedad.</p>
-                </div>
-            </div>
-            </div>
-
-            <!-- Tarjeta 5: Política de Cookies -->
-            <div class="col-12" data-animate="animate__fadeInUp">
-                <div class="card card-terms">
-                <div class="card-body">
-                    <h4 class="card-title fw-bold"><i class="ri-cookie-line text-success"></i> 5. Política de Cookies</h4>
-                    <p>Nuestro sitio utiliza cookies técnicas y funcionales esenciales para su correcto funcionamiento (por ejemplo, para recordar tus preferencias). No utilizamos cookies de seguimiento publicitario de terceros. Puedes gestionar o deshabilitar las cookies a través de la configuración de tu navegador, aunque esto podría afectar la funcionalidad de algunas partes del sitio.</p>
-                </div>
-                </div>
-            </div>
-            
-            <!-- Tarjeta 6: Seguridad y Enlaces -->
-            <div class="col-12" data-animate="animate__fadeInUp">
-                <div class="card card-terms">
-                <div class="card-body">
-                    <h4 class="card-title fw-bold"><i class="ri-links-line text-secondary"></i> 6. Seguridad y Enlaces a Terceros</h4>
-                    <p>Tomamos medidas razonables para proteger la información que recopilamos. Sin embargo, nuestro sitio puede contener enlaces a otros sitios web (como IRENA o REN21) que no son operados por nosotros. No somos responsables de las prácticas de privacidad de estos sitios de terceros y te recomendamos leer sus políticas de privacidad.</p>
-                </div>
-                </div>
             </div>
         </div>
+    </nav>
+  </header>
 
-        <div class="text-center mt-5">
-            <span class="badge bg-secondary fs-6">Última actualización: 12 de Julio de 2025</span>
+  <main class="contenido">
+    <section class="about-hero text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Política de Privacidad</h1>
+        <p class="lead text-muted animate__animated animate__fadeInUp">Tu confianza es nuestra prioridad. Aquí te explicamos cómo cuidamos tus datos.</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="row g-4">
+        <div class="col-12" data-animate="animate__fadeInUp"><div class="card card-terms"><div class="card-body"><h4 class="card-title fw-bold"><i class="ri-information-line text-success"></i> 1. Nuestro Compromiso con tu Privacidad</h4><p>En Energy Renewable, respetamos tu privacidad y nos comprometemos a proteger tus datos personales. Esta política describe qué información recopilamos y cómo la utilizamos para ofrecerte una experiencia segura y valiosa en nuestro sitio web.</p></div></div></div>
+        <div class="col-12" data-animate="animate__fadeInUp"><div class="card card-terms"><div class="card-body"><h4 class="card-title fw-bold"><i class="ri-database-2-line text-primary"></i> 2. Información que Recopilamos</h4><p>Recopilamos dos tipos de información:</p><ul><li><strong>Información proporcionada voluntariamente:</strong> Esto incluye tu nombre y dirección de correo electrónico cuando utilizas nuestro formulario de contacto para hacernos una pregunta o enviarnos una sugerencia.</li><li><strong>Información recopilada automáticamente:</strong> Utilizamos herramientas de análisis web estándar para recopilar datos anónimos sobre tu visita, como el tipo de navegador, las páginas que visitas y el tiempo de permanencia. Esta información no te identifica personalmente y se utiliza únicamente para mejorar el rendimiento y la utilidad de nuestro sitio.</li></ul></div></div></div>
+        <div class="col-12" data-animate="animate__fadeInUp"><div class="card card-terms"><div class="card-body"><h4 class="card-title fw-bold"><i class="ri-shield-user-line text-warning"></i> 3. ¿Cómo Usamos tu Información?</h4><p>La información que nos proporcionas se utiliza exclusivamente para los siguientes fines:</p><ul><li>Para responder a tus consultas y proporcionarte la información que solicitas.</li><li>Para analizar el tráfico del sitio y mejorar nuestro contenido y la experiencia del usuario.</li><li><strong>Nunca</strong> venderemos, alquilaremos o compartiremos tu información personal con terceros para fines de marketing.</li></ul></div></div></div>
+        <div class="col-12" data-animate="animate__fadeInUp"><div class="card card-terms"><div class="card-body"><h4 class="card-title fw-bold"><i class="ri-user-settings-line text-info"></i> 4. Tus Derechos sobre tus Datos</h4><p>Conforme a la legislación vigente, tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus datos personales. Para ejercer cualquiera de estos derechos, puedes enviarnos un correo electrónico a <a href="mailto:privacidad@energyrenewable.com">privacidad@energyrenewable.com</a> y atenderemos tu solicitud a la brevedad.</p></div></div></div>
+        <div class="col-12" data-animate="animate__fadeInUp"><div class="card card-terms"><div class="card-body"><h4 class="card-title fw-bold"><i class="ri-cookie-line text-success"></i> 5. Política de Cookies</h4><p>Nuestro sitio utiliza cookies técnicas y funcionales esenciales para su correcto funcionamiento (por ejemplo, para recordar tus preferencias). No utilizamos cookies de seguimiento publicitario de terceros. Puedes gestionar o deshabilitar las cookies a través de la configuración de tu navegador, aunque esto podría afectar la funcionalidad de algunas partes del sitio.</p></div></div></div>
+        <div class="col-12" data-animate="animate__fadeInUp"><div class="card card-terms"><div class="card-body"><h4 class="card-title fw-bold"><i class="ri-links-line text-secondary"></i> 6. Seguridad y Enlaces a Terceros</h4><p>Tomamos medidas razonables para proteger la información que recopilamos. Sin embargo, nuestro sitio puede contener enlaces a otros sitios web (como IRENA o REN21) que no son operados por nosotros. No somos responsables de las prácticas de privacidad de estos sitios de terceros y te recomendamos leer sus políticas de privacidad.</p></div></div></div>
+      </div>
+      <div class="text-center mt-5">
+        <span class="badge bg-secondary fs-6">Última actualización: 12 de Julio de 2025</span>
+      </div>
+    </section>
+
+    <a href="#" id="btn-ir-arriba" class="btn btn-success rounded-circle shadow position-fixed" aria-label="Ir arriba"><i class="ri-arrow-up-s-line"></i></a>
+  </main>
+
+  <footer class="custom-footer-bg text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/biogas.html" class="footer-link">Biogás</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
         </div>
-        </section>
-
-        <!-- BOTÓN FLOTANTE PARA IR ARRIBA -->
-        <a href="#" id="btn-ir-arriba" class="btn btn-success rounded-circle shadow position-fixed" aria-label="Ir arriba"><i class="ri-arrow-up-s-line"></i></a>
-    </main>
-
-    <!-- ======================================= -->
-    <!-- ============== FOOTER ================= -->
-    <!-- ======================================= -->
-    <footer class="custom-footer-bg text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row mt-3">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
-            </div>
-            <hr class="mb-4">
-            <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
-        </div>
-    </footer>
+        <hr class="mb-4">
+        <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
+    </div>
+  </footer>
 </body>
 </html>

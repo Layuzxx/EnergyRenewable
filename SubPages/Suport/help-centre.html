@@ -13,12 +13,16 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#2C5F2D">
 
+    <!-- TODO: Crear una imagen de 1200x630px para la vista previa de esta página y poner la URL completa aquí. -->
+    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-help.jpg">
+    <!-- TODO: Cuando el sitio esté online, poner la URL de esta página aquí. -->
+    <meta property="og:url" content="https://www.tudominio.com/SubPages/Suport/help-centre.html">
     <meta property="og:title" content="Centro de Ayuda - Energy Renewable">
     <meta property="og:description" content="¿Tienes preguntas? Encuentra respuestas en nuestro Centro de Ayuda o contáctanos directamente.">
-    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-help.jpg">
-    <meta property="og:url" content="https://www.tudominio.com/SubPages/Suport/help-centre.html">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
 
+    <!-- TODO: Crear los archivos de favicon y ponerlos en la raíz del proyecto. -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -36,13 +40,10 @@
     <script src="/JS/script.js" defer></script>
 </head>
 <body>
-  <!-- ======================================= -->
-  <!-- ============== HEADER ================= -->
-  <!-- ======================================= -->
   <header id="header">
     <nav id="nav-one">
         <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
-        <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
+        <a href="/SubPages/Suport/help-centre.html" class="nav-one-item active">Centro de Ayuda</a>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
         <div class="container-fluid">
@@ -68,7 +69,7 @@
                           <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">Evolución</a></li>
+                    <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a></li>
                     <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
                 </ul>
             </div>
@@ -76,11 +77,7 @@
     </nav>
   </header>
 
-  <!-- ======================================= -->
-  <!-- ============== MAIN CONTENT =========== -->
-  <!-- ======================================= -->
   <main class="contenido">
-    <!-- HERO SECTION -->
     <section class="about-hero text-center py-5">
       <div class="container">
         <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Centro de Ayuda</h1>
@@ -88,43 +85,26 @@
       </div>
     </section>
 
-    <!-- SECCIÓN FAQ -->
     <section class="container py-5">
       <h2 class="text-center mb-5 fw-bold" data-animate="animate__fadeInUp"><i class="ri-question-line"></i> Preguntas Frecuentes</h2>
       
-      <!-- Categoría 1: Preguntas Generales -->
       <h4 class="mb-3" data-animate="animate__fadeInUp">Generales</h4>
       <div class="accordion accordion-flush mb-5" id="faqGeneral" data-animate="animate__fadeInUp">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingGen1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGen1">¿De dónde obtienen la información y los datos?</button></h2>
-          <div id="collapseGen1" class="accordion-collapse collapse" data-bs-parent="#faqGeneral"><div class="accordion-body">Toda nuestra información se basa en datos de organismos internacionales reconocidos como la Agencia Internacional de Energías Renovables (IRENA) y REN21, así como estudios científicos y publicaciones especializadas.</div></div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingGen2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGen2">¿Cómo puedo usar la calculadora de energía?</button></h2>
-          <div id="collapseGen2" class="accordion-collapse collapse" data-bs-parent="#faqGeneral"><div class="accordion-body">Nuestra <a href="/SubPages/calculadora.html">Calculadora de Energía</a> es una herramienta intuitiva. Simplemente introduce los datos de consumo de tu hogar y te proporcionará una estimación de tu huella de carbono y el potencial de ahorro con energías renovables.</div></div>
-        </div>
+        <div class="accordion-item"><h2 class="accordion-header" id="headingGen1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGen1">¿De dónde obtienen la información y los datos?</button></h2><div id="collapseGen1" class="accordion-collapse collapse" data-bs-parent="#faqGeneral"><div class="accordion-body">Toda nuestra información se basa en datos de organismos internacionales reconocidos como la Agencia Internacional de Energías Renovables (IRENA) y REN21, así como estudios científicos y publicaciones especializadas.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header" id="headingGen2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGen2">¿Cómo puedo usar la calculadora de energía?</button></h2><div id="collapseGen2" class="accordion-collapse collapse" data-bs-parent="#faqGeneral"><div class="accordion-body">Nuestra <a href="/SubPages/calculadora.html">Calculadora de Energía</a> es una herramienta intuitiva. Simplemente introduce los datos de consumo de tu hogar y te proporcionará una estimación de tu huella de carbono y el potencial de ahorro con energías renovables.</div></div></div>
       </div>
 
-      <!-- Categoría 2: Preguntas Técnicas -->
       <h4 class="mb-3" data-animate="animate__fadeInUp">Técnicas</h4>
       <div class="accordion accordion-flush mb-5" id="faqTecnico" data-animate="animate__fadeInUp">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTec1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTec1">¿Qué es el LCOE que se menciona en los gráficos?</button></h2>
-          <div id="collapseTec1" class="accordion-collapse collapse" data-bs-parent="#faqTecnico"><div class="accordion-body">LCOE son las siglas de "Levelized Cost of Energy" (Costo Nivelado de Energía). Es una métrica estándar que se utiliza para comparar el costo total de construir y operar una planta de energía durante toda su vida útil, dividido por la energía total que producirá. Permite comparar diferentes tecnologías de forma justa.</div></div>
-        </div>
+        <div class="accordion-item"><h2 class="accordion-header" id="headingTec1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTec1">¿Qué es el LCOE que se menciona en los gráficos?</button></h2><div id="collapseTec1" class="accordion-collapse collapse" data-bs-parent="#faqTecnico"><div class="accordion-body">LCOE son las siglas de "Levelized Cost of Energy" (Costo Nivelado de Energía). Es una métrica estándar que se utiliza para comparar el costo total de construir y operar una planta de energía durante toda su vida útil, dividido por la energía total que producirá. Permite comparar diferentes tecnologías de forma justa.</div></div></div>
       </div>
 
-      <!-- Categoría 3: Colaboración -->
       <h4 class="mb-3" data-animate="animate__fadeInUp">Contribución y Contacto</h4>
       <div class="accordion accordion-flush mb-5" id="faqColab" data-animate="animate__fadeInUp">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingColab1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseColab1">¿Cómo puedo colaborar o sugerir un tema?</button></h2>
-          <div id="collapseColab1" class="accordion-collapse collapse" data-bs-parent="#faqColab"><div class="accordion-body">¡Nos encanta recibir sugerencias! Si tienes ideas para nuevos artículos, datos que te gustaría ver o quieres proponer una colaboración, por favor, utiliza el formulario de contacto que encontrarás más abajo en esta página.</div></div>
-        </div>
+        <div class="accordion-item"><h2 class="accordion-header" id="headingColab1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseColab1">¿Cómo puedo colaborar o sugerir un tema?</button></h2><div id="collapseColab1" class="accordion-collapse collapse" data-bs-parent="#faqColab"><div class="accordion-body">¡Nos encanta recibir sugerencias! Si tienes ideas para nuevos artículos, datos que te gustaría ver o quieres proponer una colaboración, por favor, utiliza el formulario de contacto que encontrarás más abajo en esta página.</div></div></div>
       </div>
     </section>
 
-    <!-- SECCIÓN DE FORMULARIO DE CONTACTO -->
     <section class="container py-5 bg-light rounded-3">
         <div class="text-center" data-animate="animate__fadeInUp">
             <h2 class="fw-bold"><i class="ri-mail-send-line"></i> ¿Aún tienes dudas?</h2>
@@ -132,7 +112,6 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8" data-animate="animate__fadeInUp">
-                <!-- NOTA PARA EL EQUIPO: La funcionalidad de este formulario (envío de email) será gestionada por otro compañero. -->
                 <form class="p-4 border rounded-3 bg-white shadow-sm" id="contact-form" autocomplete="off">
                     <div class="row g-3">
                         <div class="col-md-6 mb-3"><label for="nombre" class="form-label">Nombre</label><input type="text" class="form-control" id="nombre" placeholder="Tu nombre completo" required></div>
@@ -146,24 +125,20 @@
         </div>
     </section>
 
-    <!-- BOTÓN FLOTANTE PARA IR ARRIBA -->
     <a href="#" id="btn-ir-arriba" class="btn btn-success rounded-circle shadow position-fixed" aria-label="Ir arriba"><i class="ri-arrow-up-s-line"></i></a>
   </main>
 
-  <!-- ======================================= -->
-  <!-- ============== FOOTER ================= -->
-  <!-- ======================================= -->
   <footer class="custom-footer-bg text-white pt-5 pb-4">
-      <div class="container text-center text-md-start">
-          <div class="row mt-3">
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
-          </div>
-          <hr class="mb-4">
-          <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
-      </div>
+    <div class="container text-center text-md-start">
+        <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/biogas.html" class="footer-link">Biogás</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
+        </div>
+        <hr class="mb-4">
+        <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
+    </div>
   </footer>
 </body>
 </html>

@@ -12,13 +12,17 @@
     <meta name="author" content="Energy Renewable">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#97BC62">
-
+    
+    <!-- TODO: Crear una imagen de 1200x630px para la vista previa de esta página y poner la URL completa aquí. -->
+    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-biogas.jpg">
+    <!-- TODO: Cuando el sitio esté online, poner la URL de esta página aquí. -->
+    <meta property="og:url" content="https://www.tudominio.com/SubPages/TiposDeEnergias/biogas.html">
     <meta property="og:title" content="Energía de Biogás: La Guía Completa - Energy Renewable">
     <meta property="og:description" content="Aprende cómo el reciclaje de materia orgánica se convierte en una valiosa fuente de energía.">
-    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-biogas.jpg">
-    <meta property="og:url" content="https://www.tudominio.com/SubPages/TiposDeEnergias/biogas.html">
     <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_ES">
 
+    <!-- TODO: Crear los archivos de favicon y ponerlos en la raíz del proyecto. -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -38,59 +42,51 @@
     <script src="/JS/graficas.js" defer></script>
 </head>
 <body>
-    <!-- ======================================= -->
-    <!-- ============== HEADER ================= -->
-    <!-- ======================================= -->
-    <header id="header">
-        <nav id="nav-one">
-            <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
-            <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
-        </nav>
-        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
-            <div class="container-fluid">
-                <a class="navbar-brand nav-title" href="/index.html"><i class="ri-leaf-line"></i> Energy Renewable</a>
-                <form class="d-flex position-relative me-auto search-form-order">
-                    <div class="input-group">
-                        <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
-                        <span class="input-group-text"><i class="ri-search-line"></i></span>
-                    </div>
-                    <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"></ul>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-two-item active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Tipos de Energía</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Solar</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Eólica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Hidroeléctrica</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Biomasa</a></li>
-                                <li><a class="dropdown-item active" href="/SubPages/TiposDeEnergias/biogas.html">Biogás</a></li>
-                                <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">Evolución</a></li>
-                        <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header id="header">
+      <nav id="nav-one">
+          <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
+          <a href="/SubPages/Suport/help-centre.html" class="nav-one-item">Centro de Ayuda</a>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar-bg">
+          <div class="container-fluid">
+              <a class="navbar-brand nav-title" href="/index.html"><i class="ri-leaf-line"></i> Energy Renewable</a>
+              <form class="d-flex position-relative me-auto search-form-order">
+                  <div class="input-group">
+                      <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" id="buscar-input" autocomplete="off">
+                      <span class="input-group-text"><i class="ri-search-line"></i></span>
+                  </div>
+                  <ul class="dropdown-menu position-absolute w-100" id="search-suggestions" style="display: none;"></ul>
+              </form>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle nav-two-item active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Tipos de Energía</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/solar.html">Solar</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/eolica.html">Eólica</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/hidroelectrica.html">Hidroeléctrica</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/biomasa.html">Biomasa</a></li>
+                            <li><a class="dropdown-item active" href="/SubPages/TiposDeEnergias/biogas.html">Biogás</a></li>
+                            <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a></li>
+                      <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
 
-    <!-- ======================================= -->
-    <!-- ============== MAIN CONTENT =========== -->
-    <!-- ======================================= -->
-    <main class="contenido">
-        <!-- HERO SECTION ESPECÍFICO -->
-        <section class="page-hero text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x400/97BC62/FFFFFF?text=Energía+de+Residuos') center center/cover no-repeat;">
-        <div class="container">
-            <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInDown">Energía de Biogás</h1>
-            <p class="lead text-white-50 animate__animated animate__fadeInUp">Un gas renovable generado a partir del reciclaje de materia orgánica, clave en la economía circular.</p>
-        </div>
-        </section>
+  <main class="contenido">
+    <section class="page-hero text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x400/97BC62/FFFFFF?text=Energía+de+Residuos') center center/cover no-repeat;">
+      <div class="container">
+        <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInDown">Energía de Biogás</h1>
+        <p class="lead text-white-50 animate__animated animate__fadeInUp">Un gas renovable generado a partir del reciclaje de materia orgánica, clave en la economía circular.</p>
+      </div>
+    </section>
 
-    <!-- ¿QUÉ ES EL BIOGÁS? -->
     <section class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6" data-animate="animate__fadeInLeft">
@@ -104,7 +100,6 @@
         </div>
     </section>
     
-    <!-- EL PROCESO DE DIGESTIÓN ANAEROBIA -->
     <section class="container py-5 bg-light rounded-3">
         <div class="text-center mb-5" data-animate="animate__fadeInUp">
             <h2 class="fw-bold">El Proceso: De Residuo a Energía</h2>
@@ -118,43 +113,23 @@
         </div>
     </section>
 
-    <!-- GRÁFICOS -->
     <section class="container py-5">
         <div class="row g-5">
-            <!-- Gráfico 1: Composición del Biogás -->
             <div class="col-lg-6" data-animate="animate__fadeInUp">
                 <div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-sm text-center">
                     <h5 class="text-muted mb-3">Composición Típica del Biogás</h5>
                     <canvas id="composicionBiogas"></canvas>
-                    <!-- 
-                        NOTA PARA EL EQUIPO DE GRÁFICOS:
-                        - ID del Canvas: "composicionBiogas".
-                        - Tipo de Gráfico sugerido: Gráfico de pastel (pie) o dona (doughnut).
-                        - Datos a mostrar: Porcentaje de cada gas en el biogás crudo.
-                        - LABELS: ['Metano (CH₄)', 'Dióxido de Carbono (CO₂)', 'Otros Gases']
-                        - DATA: [60, 35, 5]
-                    -->
                 </div>
             </div>
-            <!-- Gráfico 2: Potencial de Producción -->
             <div class="col-lg-6" data-animate="animate__fadeInUp">
                 <div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-sm text-center">
                     <h5 class="text-muted mb-3">Potencial de Biogás por Residuo</h5>
                     <canvas id="potencialBiogas"></canvas>
-                    <!-- 
-                        NOTA PARA EL EQUIPO DE GRÁFICOS:
-                        - ID del Canvas: "potencialBiogas".
-                        - Tipo de Gráfico sugerido: Gráfico de barras.
-                        - Datos a mostrar: m³ de biogás por tonelada de residuo.
-                        - EJE X (labels): ['Estiércol Vacuno', 'Residuos de Comida', 'Lodos de Depuradora']
-                        - EJE Y (data): [50, 120, 40]
-                    -->
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- VENTAJAS Y DESAFÍOS -->
     <section class="container py-5">
         <div class="row g-5">
             <div class="col-lg-6" data-animate="animate__fadeInUp">
@@ -177,23 +152,19 @@
             </div>
         </div>
     </section>
+  </main>
 
-    </main>
-
-    <!-- ======================================= -->
-    <!-- ============== FOOTER ================= -->
-    <!-- ======================================= -->
-    <footer class="custom-footer-bg text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row mt-3">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
-            </div>
-            <hr class="mb-4">
-            <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
+  <footer class="custom-footer-bg text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/biogas.html" class="footer-link">Biogás</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
         </div>
-    </footer>
+        <hr class="mb-4">
+        <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
+    </div>
+  </footer>
 </body>
 </html>

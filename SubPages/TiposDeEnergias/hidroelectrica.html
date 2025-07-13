@@ -13,12 +13,16 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#3498db">
 
+    <!-- TODO: Crear una imagen de 1200x630px para la vista previa de esta página y poner la URL completa aquí. -->
+    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-hidro.jpg">
+    <!-- TODO: Cuando el sitio esté online, poner la URL de esta página aquí. -->
+    <meta property="og:url" content="https://www.tudominio.com/SubPages/TiposDeEnergias/hidroelectrica.html">
     <meta property="og:title" content="Energía Hidroeléctrica: La Guía Completa - Energy Renewable">
     <meta property="og:description" content="Aprende cómo el poder del agua se convierte en una de las fuentes de energía renovable más importantes del mundo.">
-    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-hidro.jpg">
-    <meta property="og:url" content="https://www.tudominio.com/SubPages/TiposDeEnergias/hidroelectrica.html">
     <meta property="og:type" content="article">
-
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- TODO: Crear los archivos de favicon y ponerlos en la raíz del proyecto. -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -38,9 +42,6 @@
     <script src="/JS/graficas.js" defer></script>
 </head>
 <body>
-  <!-- ======================================= -->
-  <!-- ============== HEADER ================= -->
-  <!-- ======================================= -->
   <header id="header">
       <nav id="nav-one">
           <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
@@ -70,7 +71,7 @@
                             <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
                           </ul>
                       </li>
-                      <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">Evolución</a></li>
+                      <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a></li>
                       <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
                   </ul>
               </div>
@@ -78,11 +79,7 @@
       </nav>
   </header>
 
-  <!-- ======================================= -->
-  <!-- ============== MAIN CONTENT =========== -->
-  <!-- ======================================= -->
   <main class="contenido">
-    <!-- HERO SECTION ESPECÍFICO -->
     <section class="page-hero text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x400/3498DB/FFFFFF?text=Poder+del+Agua') center center/cover no-repeat;">
       <div class="container">
         <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInDown">Energía Hidroeléctrica</h1>
@@ -90,14 +87,12 @@
       </div>
     </section>
 
-    <!-- ¿CÓMO FUNCIONA? -->
     <section class="container py-5">
         <div class="text-center mb-5" data-animate="animate__fadeInUp">
           <h2 class="fw-bold">Del Río a la Red Eléctrica</h2>
           <p class="lead text-muted">La energía hidroeléctrica es una de las tecnologías renovables más maduras y fiables.</p>
         </div>
         <div class="row g-5 align-items-center">
-            <!-- Icono Grande en lugar de la imagen -->
             <div class="col-lg-6 text-center" data-animate="animate__fadeInLeft">
                 <i class="ri-recycle-line feature-icon-big text-primary"></i>
             </div>
@@ -114,7 +109,6 @@
         </div>
     </section>
     
-    <!-- TIPOS DE CENTRALES -->
     <section class="container py-5 bg-light rounded-3">
         <div class="text-center mb-5" data-animate="animate__fadeInUp">
             <h2 class="fw-bold">No Todas las Centrales son Iguales</h2>
@@ -127,27 +121,17 @@
         </div>
     </section>
 
-    <!-- GRÁFICO -->
     <section class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-8" data-animate="animate__fadeInUp">
                 <div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-sm text-center">
                     <h5 class="text-muted mb-3">Principales Países Productores de Energía Hidroeléctrica</h5>
                     <canvas id="produccionHidroelectrica"></canvas>
-                    <!-- 
-                        NOTA PARA EL EQUIPO DE GRÁFICOS:
-                        - ID del Canvas: "produccionHidroelectrica".
-                        - Tipo de Gráfico sugerido: Gráfico de barras horizontales.
-                        - Datos a mostrar: Producción anual en Terawatts-hora (TWh) por país.
-                        - EJE Y (labels): ['China', 'Brasil', 'Canadá', 'Estados Unidos', 'Rusia']
-                        - EJE X (data): [1232, 389, 375, 253, 192]
-                    -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VENTAJAS Y DESAFÍOS -->
     <section class="container py-5">
         <div class="row g-5">
             <div class="col-lg-6" data-animate="animate__fadeInUp">
@@ -171,7 +155,6 @@
         </div>
     </section>
 
-    <!-- CTA A LA CALCULADORA -->
     <section class="cta-section text-center py-5" data-animate="animate__fadeIn">
         <div class="container">
             <h2 class="display-5 fw-bold text-white">Compara el potencial de las renovables</h2>
@@ -181,20 +164,17 @@
     </section>
   </main>
 
-  <!-- ======================================= -->
-  <!-- ============== FOOTER ================= -->
-  <!-- ======================================= -->
   <footer class="custom-footer-bg text-white pt-5 pb-4">
-      <div class="container text-center text-md-start">
-          <div class="row mt-3">
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
-          </div>
-          <hr class="mb-4">
-          <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
-      </div>
+    <div class="container text-center text-md-start">
+        <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/biogas.html" class="footer-link">Biogás</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
+        </div>
+        <hr class="mb-4">
+        <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
+    </div>
   </footer>
 </body>
 </html>

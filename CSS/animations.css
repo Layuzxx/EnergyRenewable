@@ -1,12 +1,16 @@
-/* ============== ANIMACIONES Y PSEUDOCLASES ============== */
+/*
+==================================================================
+== ANIMACIONES, TRANSICIONES Y EFECTOS HOVER
+==================================================================
+*/
 
 /* Transiciones suaves para una experiencia de usuario más fluida */
-.nav-one-item, .nav-two-item, .dropdown-item, .footer-link, .social-icon, .navbar-toggler, .benefit-card {
+.nav-one-item, .nav-two-item, .dropdown-item, .footer-link, .social-icon, .navbar-toggler, .benefit-card, .card-hover, .team-card, .team-socials .social-icon {
     transition: all 0.3s ease-in-out;
 }
 
 /* Efectos Hover para interactividad */
-.nav-one-item:hover {
+.nav-one-item:hover, .nav-one-item.active {
     color: var(--primary-color);
 }
 
@@ -16,7 +20,7 @@
     transform: translateY(-2px); /* Efecto de elevación sutil */
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover, .dropdown-item.active {
     background-color: var(--primary-color);
     color: var(--text-color) !important;
 }
@@ -31,6 +35,11 @@
     transform: scale(1.2) rotate(5deg); /* Efecto dinámico */
 }
 
+.team-socials .social-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
 .footer-brand-link:hover {
     text-decoration: underline !important;
 }
@@ -39,40 +48,23 @@
     opacity: 0.8;
 }
 
-/* Keyframes para animaciones de entrada */
-@keyframes slideInFromLeft {
-    from {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+/* Animación para el acordeón de beneficios */
+.accordion-button:not(.collapsed) .accordion-icon {
+    transform: rotate(10deg) scale(1.1);
 }
 
-/* Aplicando la animación al título principal de la navegación */
-.nav-title {
-    animation: slideInFromLeft 0.8s ease-out forwards;
+/* Animación para la línea de tiempo */
+.timeline-item.left .timeline-content::before {
+    content: ''; position: absolute; top: 1.5rem; width: 0; height: 0; border-style: solid;
+    right: -10px; border-width: 10px 0 10px 10px; border-color: transparent transparent transparent #fff;
+}
+.timeline-item.right .timeline-content::before {
+    content: ''; position: absolute; top: 1.5rem; width: 0; height: 0; border-style: solid;
+    left: -10px; border-width: 10px 10px 10px 0; border-color: transparent #fff transparent transparent;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 991.98px) {
+    .timeline-item.left .timeline-content::before, .timeline-item.right .timeline-content::before {
+        left: -10px; border-width: 10px 10px 10px 0; border-color: transparent #fff transparent transparent;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Animación de entrada para el footer */
-.custom-footer-bg {
-    animation: fadeIn 1s ease-out forwards;
-}
-
-/* Clase para controlar animaciones infinitas más lentas */
-.animate__infinite.animate__slower {
-    animation-duration: 3s;
 }

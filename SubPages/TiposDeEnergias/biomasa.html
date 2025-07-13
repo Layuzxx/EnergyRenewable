@@ -13,12 +13,16 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#2C5F2D">
 
+    <!-- TODO: Crear una imagen de 1200x630px para la vista previa de esta página y poner la URL completa aquí. -->
+    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-biomasa.jpg">
+    <!-- TODO: Cuando el sitio esté online, poner la URL de esta página aquí. -->
+    <meta property="og:url" content="https://www.tudominio.com/SubPages/TiposDeEnergias/biomasa.html">
     <meta property="og:title" content="Energía de Biomasa: La Guía Completa - Energy Renewable">
     <meta property="og:description" content="Aprende cómo la materia orgánica se transforma en una fuente de energía renovable y sostenible.">
-    <meta property="og:image" content="https://www.tudominio.com/assets/social-preview-biomasa.jpg">
-    <meta property="og:url" content="https://www.tudominio.com/SubPages/TiposDeEnergias/biomasa.html">
     <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_ES">
 
+    <!-- TODO: Crear los archivos de favicon y ponerlos en la raíz del proyecto. -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -38,9 +42,6 @@
     <script src="/JS/graficas.js" defer></script>
 </head>
 <body>
-  <!-- ======================================= -->
-  <!-- ============== HEADER ================= -->
-  <!-- ======================================= -->
   <header id="header">
       <nav id="nav-one">
           <a href="/SubPages/Suport/about.html" class="nav-one-item">Sobre Nosotros</a>
@@ -70,7 +71,7 @@
                             <li><a class="dropdown-item" href="/SubPages/TiposDeEnergias/geotermica.html">Geotérmica</a></li>
                           </ul>
                       </li>
-                      <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">Evolución</a></li>
+                      <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/vidaevo.html">VidaEvo</a></li>
                       <li class="nav-item"><a class="nav-link nav-two-item" href="/SubPages/calculadora.html">Calculadora</a></li>
                   </ul>
               </div>
@@ -78,11 +79,7 @@
       </nav>
   </header>
 
-  <!-- ======================================= -->
-  <!-- ============== MAIN CONTENT =========== -->
-  <!-- ======================================= -->
   <main class="contenido">
-    <!-- HERO SECTION ESPECÍFICO -->
     <section class="page-hero text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x400/2C5F2D/FFFFFF?text=Energía+Orgánica') center center/cover no-repeat;">
       <div class="container">
         <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInDown">Energía de Biomasa</h1>
@@ -90,7 +87,6 @@
       </div>
     </section>
 
-    <!-- ¿QUÉ ES LA BIOMASA? -->
     <section class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6" data-animate="animate__fadeInLeft">
@@ -104,7 +100,6 @@
         </div>
     </section>
     
-    <!-- FUENTES DE BIOMASA -->
     <section class="container py-5 bg-light rounded-3">
         <div class="text-center mb-5" data-animate="animate__fadeInUp">
             <h2 class="fw-bold">Fuentes Principales de Biomasa</h2>
@@ -117,7 +112,6 @@
         </div>
     </section>
     
-    <!-- PROCESOS DE CONVERSIÓN -->
     <section class="container py-5">
         <div class="text-center mb-5" data-animate="animate__fadeInUp">
             <h2 class="fw-bold">Procesos de Conversión Energética</h2>
@@ -137,27 +131,17 @@
         </div>
     </section>
 
-    <!-- GRÁFICO -->
     <section class="container py-5 bg-light rounded-3">
         <div class="row justify-content-center">
             <div class="col-lg-8" data-animate="animate__fadeInUp">
                 <div class="placeholder-grafico p-4 border rounded-3 bg-white shadow-sm text-center">
                     <h5 class="text-muted mb-3">Uso de la Bioenergía por Sector</h5>
                     <canvas id="usoBiomasa"></canvas>
-                    <!-- 
-                        NOTA PARA EL EQUIPO DE GRÁFICOS:
-                        - ID del Canvas: "usoBiomasa".
-                        - Tipo de Gráfico sugerido: Gráfico de dona (doughnut).
-                        - Datos a mostrar: Distribución del uso de la bioenergía a nivel mundial.
-                        - LABELS: ['Calor en Edificios e Industria', 'Transporte (Biocombustibles)', 'Electricidad']
-                        - DATA: [70, 20, 10]
-                    -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VENTAJAS Y DESAFÍOS -->
     <section class="container py-5">
         <div class="row g-5">
             <div class="col-lg-6" data-animate="animate__fadeInUp">
@@ -180,23 +164,19 @@
             </div>
         </div>
     </section>
-
   </main>
 
-  <!-- ======================================= -->
-  <!-- ============== FOOTER ================= -->
-  <!-- ======================================= -->
   <footer class="custom-footer-bg text-white pt-5 pb-4">
-      <div class="container text-center text-md-start">
-          <div class="row mt-3">
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
-          </div>
-          <hr class="mb-4">
-          <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
-      </div>
+    <div class="container text-center text-md-start">
+        <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading"><i class="ri-leaf-line"></i> Energy Renewable</h5><p class="text-white-50">Comprometidos con un futuro más verde, ofrecemos información y herramientas para un planeta sostenible.</p></div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Energías</h5><ul class="list-unstyled"><li><a href="/SubPages/TiposDeEnergias/solar.html" class="footer-link">Solar</a></li><li><a href="/SubPages/TiposDeEnergias/eolica.html" class="footer-link">Eólica</a></li><li><a href="/SubPages/TiposDeEnergias/hidroelectrica.html" class="footer-link">Hidroeléctrica</a></li><li><a href="/SubPages/TiposDeEnergias/biomasa.html" class="footer-link">Biomasa</a></li><li><a href="/SubPages/TiposDeEnergias/biogas.html" class="footer-link">Biogás</a></li><li><a href="/SubPages/TiposDeEnergias/geotermica.html" class="footer-link">Geotérmica</a></li></ul></div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Soporte</h5><ul class="list-unstyled"><li><a href="/SubPages/Suport/about.html" class="footer-link">Sobre Nosotros</a></li><li><a href="/SubPages/Suport/help-centre.html" class="footer-link">Centro de Ayuda</a></li><li><a href="/SubPages/Suport/terms.html" class="footer-link">Términos</a></li><li><a href="/SubPages/Suport/privacy.html" class="footer-link">Privacidad</a></li></ul></div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h5 class="text-uppercase fw-bold mb-4 footer-heading">Síguenos</h5><div class="social-icons"><a href="https://github.com/Layuzxx/EnergyRenewable" target="_blank" class="social-icon" aria-label="GitHub"><i class="ri-github-fill"></i></a><a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a><a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></div></div>
+        </div>
+        <hr class="mb-4">
+        <div class="row align-items-center"><div class="col-12 text-center"><p class="mb-0 text-white-50">© 2025 Todos los derechos reservados por <a href="/index.html" class="footer-brand-link"><strong>Energy Renewable</strong></a></p></div></div>
+    </div>
   </footer>
 </body>
 </html>
