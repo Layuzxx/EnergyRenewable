@@ -120,3 +120,60 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // El resto de tu código, como el de la calculadora, puede ir aquí.
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('calculatorForm');
+  const consumoInput = document.getElementById('consumo');
+  const tipoEnergia = document.querySelectorAll('input[name="tipoEnergia"]');
+  const resultadoInstalacion = document.getElementById('resultadoInstalacion');
+  const unidadInstalacion = document.getElementById('unidadInstalacion');
+  const resultadoCO2 = document.getElementById('resultadoCO2');
+  const resultsSection = document.getElementById('results');
+
+  // Fórmulas base por tipo de energía
+  const parametros = {
+    solar:         { horas: 5, eficiencia: 0.8, factorCO2: 0.7 },
+    eolica:        { horas: 8, eficiencia: 0.35, factorCO2: 0.8 },
+    hidroelectrica:{ horas: 24, eficiencia: 0.6, factorCO2: 0.9 },
+    biomasa:       { horas: 24, eficiencia: 0.25, factorCO2: 0.6 },
+    biogas:        { horas: 24, eficiencia: 0.3, factorCO2: 0.65 },
+    geotermica:    { horas: 24, eficiencia: 0.45, factorCO2: 0.85 }
+  };
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const consumoMensual = parseFloat(consumoInput.value);
+
+    if (isNaN(consumoMensual) || consumoMensual <= 0) {
+      alert("Por favor, ingresa un valor de consumo válido.");
+      return;
+    }
+
+    let tipoSeleccionado = null;
+    tipoEnergia.forEach(input => {
+        if (input.checked) {
+            tipoSeleccionado = input.value;
+        }
+    });
+
+    if (!tipoSeleccionado) {
+        alert("Por favor, selecciona una fuente de energía.");
+        return;
+    }
+
+    const { horas, eficiencia, factorCO2 } = parametros[tipoSeleccionado];
+    const diasMes = 30;
+
+    const potenciaRequerida = consumoMensual / (horas * eficiencia * diasMes);
+    const co2ReducidoAnual = consumoMensual * 12 * factorCO2; // en kilogramos
+
+    // Mostrar resultados
+    resultadoInstalacion.textContent = `${potenciaRequerida.toFixed(2)} kW`;
+    unidadInstalacion.textContent = `Para cubrir ${consumoMensual} kWh/mes con energía ${tipoSeleccionado}`;
+    resultadoCO2.textContent = `${co2ReducidoAnual.toFixed(0)} kg`;
+
+    resultsSection.style.display = 'block';
+    resultsSection.scrollIntoView({ behavior: 'smooth' });
+  });
+});
